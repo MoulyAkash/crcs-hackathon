@@ -1,63 +1,60 @@
-import React, { useEffect, useState } from 'react';
-import { withRouter } from "react-router-dom"
-import PropTypes from "prop-types"
+import React, { useEffect, useState } from "react";
+import { withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
 
 //actions
 import {
   changeLayout,
   changeTopbarTheme,
   changeLayoutWidth,
-  showRightSidebarAction
-} from "../../store/actions"
+  showRightSidebarAction,
+} from "../../store/actions";
 
 //redux
-import { useSelector, useDispatch } from "react-redux"
+import { useSelector, useDispatch } from "react-redux";
 
 //components
-import Navbar from "./Navbar"
-import Header from "./Header"
-import Footer from "./Footer"
-import RightSidebar from "../CommonForBoth/RightSidebar"
+import Navbar from "./Navbar";
+import Header from "./Header";
+import Footer from "./Footer";
+import RightSidebar from "../CommonForBoth/RightSidebar";
 const Layout = (props) => {
+  const dispatch = useDispatch();
 
-  const dispatch = useDispatch()
-
-  const {
-    topbarTheme, layoutWidth, isPreloader, showRightSidebar
-  } = useSelector(state => ({
-    topbarTheme: state.Layout.topbarTheme,
-    layoutWidth: state.Layout.layoutWidth,
-    isPreloader: state.Layout.isPreloader,
-    showRightSidebar: state.Layout.showRightSidebar,  
-  }))
+  const { topbarTheme, layoutWidth, isPreloader, showRightSidebar } =
+    useSelector((state) => ({
+      topbarTheme: state.Layout.topbarTheme,
+      layoutWidth: state.Layout.layoutWidth,
+      isPreloader: state.Layout.isPreloader,
+      showRightSidebar: state.Layout.showRightSidebar,
+    }));
 
   /*
   document title
   */
   useEffect(() => {
-    const title = props.location.pathname
-    let currentage = title.charAt(1).toUpperCase() + title.slice(2)
+    const title = props.location.pathname;
+    let currentage = title.charAt(1).toUpperCase() + title.slice(2);
 
     document.title =
-      currentage + " | Skote - Vite React Admin & Dashboard Template"
+      currentage + " | Skote - Vite React Admin & Dashboard Template";
   }, [props.location.pathname]);
- 
+
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }, []);
 
-
-    //hides right sidebar on body click
-    const hideRightbar = (event) => {
-      var rightbar = document.getElementById("right-bar");
-      //if clicked in inside right bar, then do nothing
-      if (rightbar && rightbar.contains(event.target)) {
-        return;
-      } else {
-        //if clicked in outside of rightbar then fire action for hide rightbar
-        dispatch(showRightSidebarAction(false));
-      }
-    };
+  //hides right sidebar on body click
+  const hideRightbar = (event) => {
+    var rightbar = document.getElementById("right-bar");
+    //if clicked in inside right bar, then do nothing
+    if (rightbar && rightbar.contains(event.target)) {
+      return;
+    } else {
+      //if clicked in outside of rightbar then fire action for hide rightbar
+      dispatch(showRightSidebarAction(false));
+    }
+  };
 
   /*
   layout settings
@@ -67,22 +64,22 @@ const Layout = (props) => {
   }, [dispatch]);
 
   useEffect(() => {
-     //init body click event fot toggle rightbar
-     document.body.addEventListener("click", hideRightbar, true);
+    //init body click event fot toggle rightbar
+    document.body.addEventListener("click", hideRightbar, true);
 
     if (isPreloader === true) {
-      document.getElementById("preloader").style.display = "block"
-      document.getElementById("status").style.display = "block"
+      document.getElementById("preloader").style.display = "block";
+      document.getElementById("status").style.display = "block";
 
       setTimeout(function () {
-        document.getElementById("preloader").style.display = "none"
-        document.getElementById("status").style.display = "none"
-      }, 2500)
+        document.getElementById("preloader").style.display = "none";
+        document.getElementById("status").style.display = "none";
+      }, 2500);
     } else {
-      document.getElementById("preloader").style.display = "none"
-      document.getElementById("status").style.display = "none"
+      document.getElementById("preloader").style.display = "none";
+      document.getElementById("status").style.display = "none";
     }
-  }, [isPreloader])
+  }, [isPreloader]);
 
   useEffect(() => {
     if (topbarTheme) {
@@ -97,10 +94,10 @@ const Layout = (props) => {
   }, [dispatch, layoutWidth]);
 
   const [isMenuOpened, setIsMenuOpened] = useState(false);
-  
+
   const openMenu = () => {
     setIsMenuOpened(!isMenuOpened);
-  }
+  };
 
   return (
     <React.Fragment>
@@ -131,10 +128,10 @@ const Layout = (props) => {
       {showRightSidebar ? <RightSidebar /> : null}
     </React.Fragment>
   );
-}
+};
 
 Layout.propTypes = {
-  changeLayout: PropTypes.func,/*  */
+  changeLayout: PropTypes.func /*  */,
   changeLayoutWidth: PropTypes.func,
   changeTopbarTheme: PropTypes.func,
   children: PropTypes.object,
@@ -142,7 +139,7 @@ Layout.propTypes = {
   layoutWidth: PropTypes.any,
   location: PropTypes.object,
   showRightSidebar: PropTypes.any,
-  topbarTheme: PropTypes.any
-}
+  topbarTheme: PropTypes.any,
+};
 
 export default withRouter(Layout);
