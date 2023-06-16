@@ -170,8 +170,8 @@ const ForgetPasswordPage = (props) => {
                   </Link>{" "}
                 </p>
                 <p>
-                  © {new Date().getFullYear()} MULTI-STATE CO-OPERATIVE
-                  SOCIETIES.
+                  © {new Date().getFullYear()} Central Registrar for Cooperative
+                  Societies.
                 </p>
               </div>
             </Col>

@@ -122,8 +122,8 @@ const Login = (props) => {
                       <div className="text-primary p-4">
                         <h5 className="text-primary">Welcome Back !</h5>
                         <p>
-                          Sign in to continue to MULTI-STATE CO-OPERATIVE
-                          SOCIETIES.
+                          Sign in to continue to Central Registrar for
+                          Cooperative Societies.
                         </p>
                       </div>
                     </Col>
@@ -257,8 +257,8 @@ const Login = (props) => {
                   </Link>{" "}
                 </p>
                 <p>
-                  © {new Date().getFullYear()} MULTI-STATE CO-OPERATIVE
-                  SOCIETIES.
+                  © {new Date().getFullYear()} Central Registrar for Cooperative
+                  Societies.
                 </p>
               </div>
             </Col>
