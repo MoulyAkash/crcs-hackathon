@@ -1,9 +1,21 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import { Row, Col, CardBody, Card, Alert, Container, Form, Input, FormFeedback, Label } from "reactstrap";
+import {
+  Row,
+  Col,
+  CardBody,
+  Card,
+  Alert,
+  Container,
+  Form,
+  Input,
+  FormFeedback,
+  Label,
+} from "reactstrap";
 
-//redux
+//reduxmdi-home
+
 import { useSelector, useDispatch } from "react-redux";
 
 import { withRouter, Link } from "react-router-dom";
@@ -22,14 +34,14 @@ import { loginUser, socialLogin } from "../../store/actions";
 
 // import images
 import profile from "../../assets/images/profile-img.png";
-import logo from "../../assets/images/logo.svg";
+import logo from "../../assets/MSCS_LOGO.png";
 
 //Import config
 // import { facebook, google } from "../../config";
 
-const Login = props => {
+const Login = (props) => {
   //meta title
-  document.title="Login | Skote - Vite React Admin & Dashboard Template";
+  document.title = "Login | Skote - Vite React Admin & Dashboard Template";
   const dispatch = useDispatch();
 
   const validation = useFormik({
@@ -37,8 +49,8 @@ const Login = props => {
     enableReinitialize: true,
 
     initialValues: {
-      email: "admin@themesbrand.com" || '',
-      password: "123456" || '',
+      email: "admin@themesbrand.com" || "",
+      password: "123456" || "",
     },
     validationSchema: Yup.object({
       email: Yup.string().required("Please Enter Your Email"),
@@ -46,10 +58,10 @@ const Login = props => {
     }),
     onSubmit: (values) => {
       dispatch(loginUser(values, props.history));
-    }
+    },
   });
 
-  const { error } = useSelector(state => ({
+  const { error } = useSelector((state) => ({
     error: state.Login.error,
   }));
 
@@ -79,7 +91,7 @@ const Login = props => {
   };
 
   //handleGoogleLoginResponse
-  const googleResponse = response => {
+  const googleResponse = (response) => {
     signIn(response, "google");
   };
 
@@ -87,29 +99,32 @@ const Login = props => {
   // const twitterResponse = e => {}
 
   //handleFacebookLoginResponse
-  const facebookResponse = response => {
+  const facebookResponse = (response) => {
     signIn(response, "facebook");
   };
 
   return (
     <React.Fragment>
-
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
           <i className="fas fa-home h2" />
         </Link>
       </div>
+
       <div className="account-pages my-5 pt-sm-5">
         <Container>
           <Row className="justify-content-center">
-            <Col md={8} lg={6} xl={5}>
+            <Col md={8} lg={6} xl={6}>
               <Card className="overflow-hidden">
                 <div className="bg-primary bg-soft">
                   <Row>
                     <Col xs={7}>
                       <div className="text-primary p-4">
                         <h5 className="text-primary">Welcome Back !</h5>
-                        <p>Sign in to continue to Skote.</p>
+                        <p>
+                          Sign in to continue to Central Registrar for
+                          Cooperative Societies.
+                        </p>
                       </div>
                     </Col>
                     <Col className="col-5 align-self-end">
@@ -120,13 +135,16 @@ const Login = props => {
                 <CardBody className="pt-0">
                   <div>
                     <Link to="/" className="auth-logo-light">
-                      <div className="avatar-md profile-user-wid mb-4">
+                      <div
+                        className="avatar-md profile-user-wid mb-4"
+                        style={{ overflow: "hidden" }}
+                      >
                         <span className="avatar-title rounded-circle bg-light">
                           <img
                             src={logo}
                             alt=""
                             className="rounded-circle"
-                            height="34"
+                            height="64"
                           />
                         </span>
                       </div>
@@ -154,11 +172,15 @@ const Login = props => {
                           onBlur={validation.handleBlur}
                           value={validation.values.email || ""}
                           invalid={
-                            validation.touched.email && validation.errors.email ? true : false
+                            validation.touched.email && validation.errors.email
+                              ? true
+                              : false
                           }
                         />
                         {validation.touched.email && validation.errors.email ? (
-                          <FormFeedback type="invalid">{validation.errors.email}</FormFeedback>
+                          <FormFeedback type="invalid">
+                            {validation.errors.email}
+                          </FormFeedback>
                         ) : null}
                       </div>
 
@@ -172,11 +194,17 @@ const Login = props => {
                           onChange={validation.handleChange}
                           onBlur={validation.handleBlur}
                           invalid={
-                            validation.touched.password && validation.errors.password ? true : false
+                            validation.touched.password &&
+                            validation.errors.password
+                              ? true
+                              : false
                           }
                         />
-                        {validation.touched.password && validation.errors.password ? (
-                          <FormFeedback type="invalid">{validation.errors.password}</FormFeedback>
+                        {validation.touched.password &&
+                        validation.errors.password ? (
+                          <FormFeedback type="invalid">
+                            {validation.errors.password}
+                          </FormFeedback>
                         ) : null}
                       </div>
 
@@ -204,66 +232,6 @@ const Login = props => {
                       </div>
 
                       <div className="mt-4 text-center">
-                        <h5 className="font-size-14 mb-3">Sign in with</h5>
-
-                        <ul className="list-inline">
-                          {/* <li className="list-inline-item">
-                            <FacebookLogin
-                              appId={facebook.APP_ID}
-                              autoLoad={false}
-                              callback={facebookResponse}
-                              render={renderProps => (
-                                <Link
-                                  to="#"
-                                  className="social-list-item bg-primary text-white border-primary"
-                                  onClick={renderProps.onClick}
-                                >
-                                  <i className="mdi mdi-facebook" />
-                                </Link>
-                              )}
-                            />
-                          </li> */}
-                          {/*<li className="list-inline-item">*/}
-                          {/*  <TwitterLogin*/}
-                          {/*    loginUrl={*/}
-                          {/*      "http://localhost:4000/api/v1/auth/twitter"*/}
-                          {/*    }*/}
-                          {/*    onSuccess={this.twitterResponse}*/}
-                          {/*    onFailure={this.onFailure}*/}
-                          {/*    requestTokenUrl={*/}
-                          {/*      "http://localhost:4000/api/v1/auth/twitter/revers"*/}
-                          {/*    }*/}
-                          {/*    showIcon={false}*/}
-                          {/*    tag={"div"}*/}
-                          {/*  >*/}
-                          {/*    <a*/}
-                          {/*      href=""*/}
-                          {/*      className="social-list-item bg-info text-white border-info"*/}
-                          {/*    >*/}
-                          {/*      <i className="mdi mdi-twitter"/>*/}
-                          {/*    </a>*/}
-                          {/*  </TwitterLogin>*/}
-                          {/*</li>*/}
-                          {/* <li className="list-inline-item">
-                            <GoogleLogin
-                              clientId="23144678283-oek7ncjmmrgkgmi2i56sc411gp71a8sp.apps.googleusercontent.com"
-                              render={renderProps => (
-                                <Link
-                                  to="#"
-                                  className="social-list-item bg-danger text-white border-danger"
-                                  onClick={renderProps.onClick}
-                                >
-                                  <i className="mdi mdi-google" />
-                                </Link>
-                              )}
-                              onSuccess={googleResponse}
-                              onFailure={() => { }}
-                            />
-                          </li> */}
-                        </ul>
-                      </div>
-
-                      <div className="mt-4 text-center">
                         <Link to="/forgot-password" className="text-muted">
                           <i className="mdi mdi-lock me-1" />
                           Forgot your password?
@@ -274,16 +242,23 @@ const Login = props => {
                 </CardBody>
               </Card>
               <div className="mt-5 text-center">
-                <p>
-                  Don&#39;t have an account ?{" "}
-                  <Link to="/register" className="fw-medium text-primary">
+                <p
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "4px",
+                    justifyContent: "center",
+                  }}
+                >
+                  <span>Go to home page </span>
+                  <Link to="/" className="fw-medium text-primary">
                     {" "}
-                    Signup now{" "}
+                    <i className="mdi mdi-18px mdi-home"></i>
                   </Link>{" "}
                 </p>
                 <p>
-                  © {new Date().getFullYear()} Skote. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger" /> by Themesbrand
+                  © {new Date().getFullYear()} Central Registrar for Cooperative
+                  Societies.
                 </p>
               </div>
             </Col>

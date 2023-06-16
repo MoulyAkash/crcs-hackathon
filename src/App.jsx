@@ -1,22 +1,22 @@
-import PropTypes from 'prop-types'
-import React from "react"
+import PropTypes from "prop-types";
+import React from "react";
 
-import { Switch, BrowserRouter as Router } from "react-router-dom"
-import { connect } from "react-redux"
+import { Switch, BrowserRouter as Router } from "react-router-dom";
+import { connect } from "react-redux";
 
 // Import Routes all
-import { authProtectedRoutes,publicRoutes } from "./routes"
+import { authProtectedRoutes, publicRoutes } from "./routes";
 
 // Import all middleware
-import Authmiddleware from "./routes/route"
+import Authmiddleware from "./routes/route";
 
 // layouts Format
-import VerticalLayout from "./components/VerticalLayout/"
-import HorizontalLayout from "./components/HorizontalLayout/"
-import NonAuthLayout from "./components/NonAuthLayout"
+import VerticalLayout from "./components/VerticalLayout/";
+import HorizontalLayout from "./components/HorizontalLayout/";
+import NonAuthLayout from "./components/NonAuthLayout";
 
 // Import scss
-import "./assets/scss/theme.scss"
+import "./assets/scss/theme.scss";
 
 // Import Firebase Configuration file
 // import { initFirebaseBackend } from "./helpers/firebase_helper"
@@ -26,36 +26,23 @@ import fakeBackend from "/src/helpers/AuthType/fakeBackend";
 // Activating fake backend
 fakeBackend();
 
-// const firebaseConfig = {
-//   apiKey: import.meta.env.VITE_APP_APIKEY,
-//   authDomain: import.meta.env.VITE_APP_AUTHDOMAIN,
-//   databaseURL: import.meta.env.VITE_APP_DATABASEURL,
-//   projectId: import.meta.env.VITE_APP_PROJECTID,
-//   storageBucket: import.meta.env.VITE_APP_STORAGEBUCKET,
-//   messagingSenderId: import.meta.env.VITE_APP_MESSAGINGSENDERID,
-//   appId: import.meta.env.VITE_APP_APPID,
-//   measurementId: import.meta.env.VITE_APP_MEASUREMENTID,
-// };
-
-// init firebase backend
-// initFirebaseBackend(firebaseConfig)
-
-const App = props => {
-
+const App = (props) => {
   function getLayout() {
-    let layoutCls = VerticalLayout
+    let layoutCls = VerticalLayout;
     switch (props.layout.layoutType) {
       case "horizontal":
-        layoutCls = HorizontalLayout
-        break
+        layoutCls = HorizontalLayout;
+        break;
       default:
-        layoutCls = VerticalLayout
-        break
+        layoutCls = VerticalLayout;
+        break;
     }
-    return layoutCls
+
+    return HorizontalLayout;
+    // return layoutCls;
   }
-                
-  const Layout = getLayout()
+
+  const Layout = getLayout();
   return (
     <React.Fragment>
       <Router>
@@ -84,17 +71,17 @@ const App = props => {
         </Switch>
       </Router>
     </React.Fragment>
-  )
-}
+  );
+};
 
 App.propTypes = {
-  layout: PropTypes.any
-}
+  layout: PropTypes.any,
+};
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     layout: state.Layout,
-  }
-}
+  };
+};
 
-export default connect(mapStateToProps, null)(App)
+export default connect(mapStateToProps, null)(App);

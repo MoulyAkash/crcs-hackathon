@@ -9,7 +9,7 @@ import { stateWiseList } from "../data/data";
 import Breadcrumbs from "../components/Common/Breadcrumb";
 import TableContainer from "../components/Common/TableContainer";
 
-function DatatableTables() {
+function StateWiseSocityList() {
   const stateWiseTableColumns = useMemo(
     () => [
       {
@@ -31,13 +31,16 @@ function DatatableTables() {
   return (
     <div className="page-content">
       <div className="container-fluid">
-        <Breadcrumbs title="Tables" breadcrumbItem="Data Tables" />
+        <Breadcrumbs
+          title="Reg. Societies"
+          breadcrumbItem="State Wise Socities"
+        />
         {/* <Table columns={columns} data={data} /> */}
         <TableContainer
           columns={stateWiseTableColumns}
           data={stateWiseList}
           isGlobalFilter={true}
-          isAddOptions={true}
+          isAddOptions={false}
           customPageSize={10}
           className="custom-header-css"
         />
@@ -45,8 +48,9 @@ function DatatableTables() {
     </div>
   );
 }
-DatatableTables.propTypes = {
+
+StateWiseSocityList.propTypes = {
   preGlobalFilteredRows: PropTypes.any,
 };
 
-export default DatatableTables;
+export default StateWiseSocityList;

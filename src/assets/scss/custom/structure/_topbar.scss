@@ -193,10 +193,11 @@
   }
 }
 
-body[data-topbar="dark"] {
+body[data-topbar="light"] {
   #page-topbar {
     background-color: $header-dark-bg;
   }
+
   .navbar-header {
     .dropdown .show {
       &.header-item {
@@ -247,7 +248,7 @@ body[data-topbar="dark"] {
   }
 }
 
-body[data-sidebar="dark"] {
+body[data-sidebar="light"] {
   .navbar-brand-box {
     background: $sidebar-dark-bg;
   }
