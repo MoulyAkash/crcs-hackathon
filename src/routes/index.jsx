@@ -12,9 +12,15 @@ import ForgetPwd from "../pages/Authentication/ForgetPassword";
 
 // Dashboard
 import Dashboard from "../pages/Dashboard/index";
+import Registration from "../pages/Registration";
+import Home from "../pages/Home";
+import StateWiseSocityList from "../pages/StateWiseSocityList";
 
 const authProtectedRoutes = [
   { path: "/dashboard", component: Dashboard },
+  { path: "/registration", component: Registration },
+  { path: "/home", component: Home },
+  { path: "/registeredSocieties", component: StateWiseSocityList },
 
   // //profile
   { path: "/profile", component: UserProfile },
