@@ -11,7 +11,7 @@ import Register from "../pages/Authentication/Register";
 import ForgetPwd from "../pages/Authentication/ForgetPassword";
 
 // Dashboard
-import Dashboard from "../pages/Dashboard/index";
+import Dashboard from "../pages/Dashboard";
 import Registration from "../pages/Registration";
 import Home from "../pages/Home";
 import StateWiseSocityList from "../pages/StateWiseSocityList";

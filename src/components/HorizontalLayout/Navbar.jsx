@@ -91,9 +91,6 @@ const Navbar = (props) => {
                 <li className="nav-item">
                   <Link
                     className="nav-link dropdown-toggle arrow-none"
-                    onClick={(e) => {
-                      e.preventDefault();
-                    }}
                     to="/dashboard"
                   >
                     {props.t("Home")} {props.menuOpen}
