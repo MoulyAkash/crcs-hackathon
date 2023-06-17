@@ -140,7 +140,7 @@ const Navbar = (props) => {
                     <div className="arrow-down"></div>
                   </Link>
                   <div className={classname("dropdown-menu", { show: ui })}>
-                    <Link to="/#" className="dropdown-item">
+                    <Link to="/state-wise-society-list" className="dropdown-item">
                       {props.t("State-wise List")}
                     </Link>
                     <Link to="/#" className="dropdown-item">
@@ -252,7 +252,7 @@ const Navbar = (props) => {
                     <div className="arrow-down"></div>
                   </Link>
                   <div className={classname("dropdown-menu", { show: crypto })}>
-                    <Link to="/registeredSocieties" className="dropdown-item">
+                    <Link to="/registration" className="dropdown-item">
                       {props.t("New User Registration")}
                     </Link>
                     <Link to="/#" className="dropdown-item">
