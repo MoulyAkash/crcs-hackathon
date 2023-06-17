@@ -23,6 +23,8 @@ import AllRegSocieties from "../pages/AllRegSocieties";
 import AnnualReturnsOffline from "../pages/AnnualReturnsOffline";
 import Bank from "../pages/Bank";
 import RegisteredUsers from "../pages/RegisteredUsers";
+import ReceivedApplications from "../pages/ReceivedApplications";
+import StatusOfApplication from "../pages/StatusOfApplication";
 
 const authProtectedRoutes = [
   { path: "/dashboard", component: Dashboard },
@@ -37,6 +39,8 @@ const authProtectedRoutes = [
   { path: "/filled-ar-offline", component: AnnualReturnsOffline },
   { path: "/bank", component: Bank },
   { path: "/registered-users", component: RegisteredUsers },
+  { path: "/received-applications", component: ReceivedApplications },
+  { path: "/status-of-application", component: StatusOfApplication },
 
 
   // //profile

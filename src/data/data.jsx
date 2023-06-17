@@ -1,3 +1,5 @@
+import { Button } from "reactstrap";
+
 import Form1 from "../assets/forms/Form1.pdf";
 import Form2 from "../assets/forms/Form2.pdf";
 import Form3 from "../assets/forms/Form3.pdf";
@@ -8,6 +10,8 @@ import GuidelineAct2002 from "../assets/mscs-act/GuidelineAct2002.pdf";
 import Rules2002 from "../assets/mscs-act/Rules2002.pdf";
 import Model2002 from "../assets/mscs-act/Model2002.pdf";
 import NatPolicy02 from "../assets/mscs-act/NatPolicy02.pdf";
+
+import Sample from "../assets/sample.pdf";
 
 export const stateWiseList = [
   {
@@ -1752,7 +1756,7 @@ export const mscsPDF = [
     formName: "National Policy on Cooperatives, 2002",
     formSize: "0.5 MB",
     file: NatPolicy02,
-  }
+  },
 ];
 
 export const annularReportOffline = [
@@ -2837,5 +2841,618 @@ export const registeredUsers = [
     district: "RAJKOT",
     societyType: "Cooperative Bank",
     registrationDate: "18 Nov 2015",
+  },
+];
+
+export const receivedApplications = [
+  {
+    id: 1,
+    societyName: "Proutist MultiState Cooperative Society Ltd.",
+    stateName: "UTTAR PRADESH",
+    districtName: "LUCKNOW",
+    type: "Amendments",
+    received: "16 Jun 2023",
+    disposalBefore: "15 Sep 2023",
+  },
+  {
+    id: 2,
+    societyName:
+      "BIHAR STATE UCO BANK OFFICER'S CREDIT & THRIFT CO-OPERATIVE SOCIETY LTD.",
+    stateName: "BIHAR",
+    districtName: "PATNA",
+    type: "Deemed",
+    received: "14 Jun 2023",
+    disposalBefore: "",
+  },
+  {
+    id: 3,
+    societyName: "CHANDIGARH MULTIPURPOSE COOPERATIVE LTD",
+    stateName: "CHANDIGARH",
+    districtName: "CHANDIGARH",
+    type: "New Registration",
+    received: "14 Jun 2023",
+    disposalBefore: "13 Oct 2023",
+  },
+  {
+    id: 4,
+    societyName:
+      "The Lakshmi Vilas Bank Staff Co-operative Thrift and Credit Society Limited",
+    stateName: "TAMIL NADU",
+    districtName: "CHENNAI",
+    type: "Re-consideration for Amendment",
+    received: "14 Jun 2023",
+    disposalBefore: "13 Sep 2023",
+  },
+  {
+    id: 5,
+    societyName: "Agriculture Development Cooperative Federation",
+    stateName: "PUNJAB",
+    districtName: "S.A.S NAGAR (MOHALI)",
+    type: "Amendments",
+    received: "13 Jun 2023",
+    disposalBefore: "12 Sep 2023",
+  },
+  {
+    id: 6,
+    societyName:
+      "Farmers Welfare And Growth Multi State Cooperative Society Limited",
+    stateName: "TAMIL NADU",
+    districtName: "SALEM",
+    type: "New Registration",
+    received: "13 Jun 2023",
+    disposalBefore: "12 Oct 2023",
+  },
+  {
+    id: 7,
+    societyName: "Shree Warana Sahakari Dudh Utpadak Prakriya Sangh Ltd",
+    stateName: "MAHARASHTRA",
+    districtName: "KOLHAPUR",
+    type: "Re-consideration for Amendment",
+    received: "12 Jun 2023",
+    disposalBefore: "11 Sep 2023",
+  },
+  {
+    id: 8,
+    societyName: "Dharashiv Multi State Co-operative Agro Purpose Society Ltd",
+    stateName: "MAHARASHTRA",
+    districtName: "OSMANABAD",
+    type: "New Registration",
+    received: "12 Jun 2023",
+    disposalBefore: "11 Oct 2023",
+  },
+  {
+    id: 9,
+    societyName: "Swargandhar Multi-State Cooperative Credit Society Ltd.",
+    stateName: "GUJARAT",
+    districtName: "AHMEDABAD",
+    type: "Amendments",
+    received: "11 Jun 2023",
+    disposalBefore: "10 Sep 2023",
+  },
+  {
+    id: 10,
+    societyName:
+      "Uttar Pradesh State Road Transport Corporation Karmchari Awas Samiti Ltd.",
+    stateName: "UTTAR PRADESH",
+    districtName: "LUCKNOW",
+    type: "Deemed",
+    received: "11 Jun 2023",
+    disposalBefore: "",
+  },
+  {
+    id: 11,
+    societyName: "Mahatma Gandhi Mahila Nagrik Sahkari Awas Samiti Maryadit",
+    stateName: "MADHYA PRADESH",
+    districtName: "BHOPAL",
+    type: "Non-deemed",
+    received: "11 Jun 2023",
+    disposalBefore: "10 Sep 2023",
+  },
+  {
+    id: 12,
+    societyName: "Rashtriya Kamgar Sahkari Awas Samiti Ltd.",
+    stateName: "MAHARASHTRA",
+    districtName: "MUMBAI CITY",
+    type: "Deemed",
+    received: "12 Jun 2023",
+    disposalBefore: "",
+  },
+  {
+    id: 13,
+    societyName: "Punjab Mandi Board Cooperative House Building Society Ltd.",
+    stateName: "PUNJAB",
+    districtName: "MOGA",
+    type: "Amendments",
+    received: "13 Jun 2023",
+    disposalBefore: "12 Sep 2023",
+  },
+  {
+    id: 14,
+    societyName: "Sant Gadge Maharaj Sahakari Griha Nirman Sanstha Maryadit",
+    stateName: "MAHARASHTRA",
+    districtName: "AURANGABAD",
+    type: "Non-deemed",
+    received: "14 Jun 2023",
+    disposalBefore: "13 Sep 2023",
+  },
+  {
+    id: 15,
+    societyName:
+      "Rajasthan State Road Transport Corporation Employees Housing Building Cooperative Society Ltd.",
+    stateName: "RAJASTHAN",
+    districtName: "JAIPUR",
+    type: "Non-deemed",
+    received: "15 Jun 2023",
+    disposalBefore: "14 Sep 2023",
+  },
+  {
+    id: 16,
+    societyName: "All India Institute of Medical Sciences (AIIMS), Patna",
+    stateName: "BIHAR",
+    districtName: "PATNA",
+    type: "Amendments",
+    received: "06 Jun 2023",
+    disposalBefore: "05 Sep 2023",
+  },
+  {
+    id: 17,
+    societyName: "West Bengal Minorities Development & Finance Corporation",
+    stateName: "WEST BENGAL",
+    districtName: "KOLKATA",
+    type: "Amendments",
+    received: "07 Jun 2023",
+    disposalBefore: "06 Sep 2023",
+  },
+  {
+    id: 18,
+    societyName: "Chhattisgarh State Beverages Corporation Limited",
+    stateName: "CHHATTISGARH",
+    districtName: "RAIPUR",
+    type: "Amendments",
+    received: "07 Jun 2023",
+    disposalBefore: "06 Sep 2023",
+  },
+  {
+    id: 19,
+    societyName: "Haryana State Warehousing Corporation",
+    stateName: "HARYANA",
+    districtName: "AMBALA",
+    type: "Amendments",
+    received: "07 Jun 2023",
+    disposalBefore: "06 Sep 2023",
+  },
+  {
+    id: 20,
+    societyName: "Rajasthan Co-operative Dairy Federation Limited",
+    stateName: "RAJASTHAN",
+    districtName: "JAIPUR",
+    type: "Amendments",
+    received: "08 Jun 2023",
+    disposalBefore: "07 Sep 2023",
+  },
+  {
+    id: 21,
+    societyName:
+      "Punjab State Co-operative Milk Producers' Federation Limited (Verka)",
+    stateName: "PUNJAB",
+    districtName: "CHANDIGARH",
+    type: "Amendments",
+    received: "08 Jun 2023",
+    disposalBefore: "07 Sep 2023",
+  },
+  {
+    id: 22,
+    societyName: "Madhya Pradesh Audyogik Kendra Vikas Nigam",
+    stateName: "MADHYA PRADESH",
+    districtName: "BHOPAL",
+    type: "Amendments",
+    received: "09 Jun 2023",
+    disposalBefore: "08 Sep 2023",
+  },
+  {
+    id: 23,
+    societyName: "Bihar State Building Construction Corporation",
+    stateName: "BIHAR",
+    districtName: "PATNA",
+    type: "Amendments",
+    received: "09 Jun 2023",
+    disposalBefore: "08 Sep 2023",
+  },
+  {
+    id: 24,
+    societyName:
+      "Delhi Transport Infrastructure Development Corporation Limited",
+    stateName: "DELHI",
+    districtName: "NEW DELHI",
+    type: "Amendments",
+    received: "10 Jun 2023",
+    disposalBefore: "09 Sep 2023",
+  },
+  {
+    id: 25,
+    societyName: "Jammu and Kashmir Tourism Development Corporation Limited",
+    stateName: "JAMMU AND KASHMIR",
+    districtName: "SRINAGAR",
+    type: "Amendments",
+    received: "10 Jun 2023",
+    disposalBefore: "09 Sep 2023",
+  },
+  {
+    id: 26,
+    societyName: "Kerala State Industrial Development Corporation",
+    stateName: "KERALA",
+    districtName: "THIRUVANANTHAPURAM",
+    type: "Amendments",
+    received: "11 Jun 2023",
+    disposalBefore: "10 Sep 2023",
+  },
+  {
+    id: 27,
+    societyName: "Uttarakhand Jal Sansthan",
+    stateName: "UTTARAKHAND",
+    districtName: "DEHRADUN",
+    type: "Amendments",
+    received: "11 Jun 2023",
+    disposalBefore: "10 Sep 2023",
+  },
+  {
+    id: 28,
+    societyName: "Uttar Pradesh State Bridge Corporation Limited",
+    stateName: "UTTAR PRADESH",
+    districtName: "LUCKNOW",
+    type: "Amendments",
+    received: "12 Jun 2023",
+    disposalBefore: "11 Sep 2023",
+  },
+  {
+    id: 29,
+    societyName: "Tamil Nadu Small Industries Development Corporation Limited",
+    stateName: "TAMIL NADU",
+    districtName: "CHENNAI",
+    type: "Amendments",
+    received: "12 Jun 2023",
+    disposalBefore: "11 Sep 2023",
+  },
+  {
+    id: 30,
+    societyName: "Maharashtra State Road Development Corporation Limited",
+    stateName: "MAHARASHTRA",
+    districtName: "MUMBAI CITY",
+    type: "Amendments",
+    received: "13 Jun 2023",
+    disposalBefore: "12 Sep 2023",
+  },
+  {
+    id: 31,
+    societyName: "Andhra Pradesh Industrial Infrastructure Corporation Limited",
+    stateName: "ANDHRA PRADESH",
+    districtName: "VIJAYAWADA",
+    type: "Amendments",
+    received: "13 Jun 2023",
+    disposalBefore: "12 Sep 2023",
+  },
+];
+
+export const statusOfApplication = [
+  {
+    id: "1",
+    societyName: "Om Agro Multi State Cooperative Society Ltd",
+    proposalType: "New Registration",
+    state: "HARYANA",
+    district: "PANIPAT",
+    applicationDate: "13 Jul 2021",
+    notice: "",
+    order: "",
+    certificate: (
+      <Button
+        color="danger"
+        className="btn btn-danger "
+        onClick={() => (location.href = "../src/assets/sample.pdf")}
+      >
+        <i className="mdi mdi-file-pdf" style={{ paddingRight: 5 }}></i>
+        Download
+      </Button>
+    ),
+  },
+  {
+    id: "2",
+    societyName: "Ente Naadu Multi State Agro Co-operative Society Ltd.",
+    proposalType: "New Registration",
+    state: "KERALA",
+    district: "ERNAKULAM",
+    applicationDate: "06 Sep 2021",
+    notice: (
+      <Button
+        color="danger"
+        className="btn btn-danger "
+        onClick={() => (location.href = "../src/assets/sample.pdf")}
+      >
+        <i className="mdi mdi-file-pdf" style={{ paddingRight: 5 }}></i>
+        Download
+      </Button>
+    ),
+    order: "",
+    certificate: (
+      <Button
+        color="danger"
+        className="btn btn-danger "
+        onClick={() => (location.href = "../src/assets/sample.pdf")}
+      >
+        <i className="mdi mdi-file-pdf" style={{ paddingRight: 5 }}></i>
+        Download
+      </Button>
+    ),
+  },
+  {
+    id: "3",
+    societyName:
+      "Oriental Fire and General Insurance Employees Cooperative Thrift and Credit Society Ltd.",
+    proposalType: "Deemed",
+    state: "BIHAR",
+    district: "PATNA",
+    applicationDate: "07 Sep 2021",
+    notice: "",
+    order: "",
+    certificate: "",
+  },
+  {
+    id: "4",
+    societyName:
+      "Shikharji Multi State Agro Processing and Marketing Cooperative Ltd.",
+    proposalType: "New Registration",
+    state: "MAHARASHTRA",
+    district: "BULDHANA",
+    applicationDate: "07 Sep 2021",
+    notice: (
+      <Button
+        color="danger"
+        className="btn btn-danger "
+        onClick={() => (location.href = "../src/assets/sample.pdf")}
+      >
+        <i className="mdi mdi-file-pdf" style={{ paddingRight: 5 }}></i>
+        Download
+      </Button>
+    ),
+    order: (
+      <Button
+        color="danger"
+        className="btn btn-danger "
+        onClick={() => (location.href = "../src/assets/sample.pdf")}
+      >
+        <i className="mdi mdi-file-pdf" style={{ paddingRight: 5 }}></i>
+        Download
+      </Button>
+    ),
+    certificate: "",
+  },
+  {
+    id: "5",
+    societyName: "Sonai Cooperative Dairy Ltd.",
+    proposalType: "Amendments",
+    state: "MAHARASHTRA",
+    district: "PUNE",
+    applicationDate: "07 Sep 2021",
+    notice: "",
+    order: "",
+    certificate: (
+      <Button
+        color="danger"
+        className="btn btn-danger "
+        onClick={() => (location.href = "../src/assets/sample.pdf")}
+      >
+        <i className="mdi mdi-file-pdf" style={{ paddingRight: 5 }}></i>
+        Download
+      </Button>
+    ),
+  },
+  {
+    id: "6",
+    societyName: "Air Corporations Employees Co-operative Credit Society Ltd.",
+    proposalType: "Amendments",
+    state: "TAMIL NADU",
+    district: "CHENNAI",
+    applicationDate: "08 Sep 2021",
+    notice: "",
+    order: "",
+    certificate: (
+      <Button
+        color="danger"
+        className="btn btn-danger "
+        onClick={() => (location.href = "../src/assets/sample.pdf")}
+      >
+        <i className="mdi mdi-file-pdf" style={{ paddingRight: 5 }}></i>
+        Download
+      </Button>
+    ),
+  },
+  {
+    id: "7",
+    societyName: "Citizens Cooperative Bank Ltd",
+    proposalType: "Amendments",
+    state: "GUJARAT",
+    district: "RAJKOT",
+    applicationDate: "08 Sep 2021",
+    notice: "",
+    order: (
+      <Button
+        color="danger"
+        className="btn btn-danger "
+        onClick={() => (location.href = "../src/assets/sample.pdf")}
+      >
+        <i className="mdi mdi-file-pdf" style={{ paddingRight: 5 }}></i>
+        Download
+      </Button>
+    ),
+    certificate: "",
+  },
+  {
+    id: "8",
+    societyName: "Maharashtra Urban Cooperative Credit Society, Mehkar",
+    proposalType: "Conversion",
+    state: "MAHARASHTRA",
+    district: "BULDHANA",
+    applicationDate: "08 Sep 2021",
+    notice: "",
+    order: "",
+    certificate: "",
+  },
+  {
+    id: "9",
+    societyName: "Mahesh Urban Credit Cooperative Society Ltd.",
+    proposalType: "Conversion",
+    state: "MAHARASHTRA",
+    district: "PUNE",
+    applicationDate: "08 Sep 2021",
+    notice: "",
+    order: "",
+    certificate: (
+      <Button
+        color="danger"
+        className="btn btn-danger "
+        onClick={() => (location.href = "../src/assets/sample.pdf")}
+      >
+        <i className="mdi mdi-file-pdf" style={{ paddingRight: 5 }}></i>
+        Download
+      </Button>
+    ),
+  },
+  {
+    id: "10",
+    societyName: "Sebastein Co-operative Credit Society Ltd.",
+    proposalType: "Conversion",
+    state: "TAMIL NADU",
+    district: "MADURAI",
+    applicationDate: "08 Sep 2021",
+    notice: "",
+    order: "",
+    certificate: "",
+  },
+  {
+    id: "11",
+    societyName: "Green Valley Co-operative Credit Society Ltd.",
+    proposalType: "Conversion",
+    state: "GUJARAT",
+    district: "AHMEDABAD",
+    applicationDate: "08 Sep 2021",
+    notice: "",
+    order: "",
+    certificate: "",
+  },
+  {
+    id: "12",
+    societyName: "Sahayata Cooperative Credit Society Ltd.",
+    proposalType: "Conversion",
+    state: "RAJASTHAN",
+    district: "JAIPUR",
+    applicationDate: "09 Sep 2021",
+    notice: "",
+    order: "",
+    certificate: (
+      <Button
+        color="danger"
+        className="btn btn-danger "
+        onClick={() => (location.href = "../src/assets/sample.pdf")}
+      >
+        <i className="mdi mdi-file-pdf" style={{ paddingRight: 5 }}></i>
+        Download
+      </Button>
+    ),
+  },
+  {
+    id: "13",
+    societyName: "Sarvodaya Cooperative Credit Society Ltd.",
+    proposalType: "Conversion",
+    state: "GUJARAT",
+    district: "VADODARA",
+    applicationDate: "09 Sep 2021",
+    notice: "",
+    order: "",
+    certificate: "",
+  },
+  {
+    id: "14",
+    societyName: "Nirmal Co-operative Credit Society Ltd.",
+    proposalType: "Conversion",
+    state: "MAHARASHTRA",
+    district: "MUMBAI",
+    applicationDate: "10 Sep 2021",
+    notice: "",
+    order: "",
+    certificate: "",
+  },
+  {
+    id: "15",
+    societyName: "Sahakar Co-operative Credit Society Ltd.",
+    proposalType: "Conversion",
+    state: "GUJARAT",
+    district: "SURAT",
+    applicationDate: "11 Sep 2021",
+    notice: "",
+    order: "",
+    certificate: (
+      <Button
+        color="danger"
+        className="btn btn-danger "
+        onClick={() => (location.href = "../src/assets/sample.pdf")}
+      >
+        <i className="mdi mdi-file-pdf" style={{ paddingRight: 5 }}></i>
+        Download
+      </Button>
+    ),
+  },
+  {
+    id: "16",
+    societyName: "Shree Siddhi Vinayak Co-operative Credit Society Ltd.",
+    proposalType: "Conversion",
+    state: "MAHARASHTRA",
+    district: "PUNE",
+    applicationDate: "12 Sep 2021",
+    notice: "",
+    order: "",
+    certificate: "",
+  },
+  {
+    id: "17",
+    societyName: "Sampurna Sahakari Credit Society Ltd.",
+    proposalType: "Conversion",
+    state: "MAHARASHTRA",
+    district: "THANE",
+    applicationDate: "13 Sep 2021",
+    notice: "",
+    order: "",
+    certificate: "",
+  },
+  {
+    id: "18",
+    societyName: "Kisan Co-operative Credit Society Ltd.",
+    proposalType: "Conversion",
+    state: "UTTAR PRADESH",
+    district: "LUCKNOW",
+    applicationDate: "14 Sep 2021",
+    notice: "",
+    order: "",
+    certificate: "",
+  },
+  {
+    id: "19",
+    societyName: "Sahyog Co-operative Credit Society Ltd.",
+    proposalType: "Conversion",
+    state: "GUJARAT",
+    district: "RAJKOT",
+    applicationDate: "15 Sep 2021",
+    notice: "",
+    order: "",
+    certificate: "",
+  },
+  {
+    id: "20",
+    societyName: "Swarajya Co-operative Credit Society Ltd.",
+    proposalType: "Conversion",
+    state: "MAHARASHTRA",
+    district: "NAGPUR",
+    applicationDate: "16 Sep 2021",
+    notice: "",
+    order: "",
+    certificate: "",
   },
 ];
