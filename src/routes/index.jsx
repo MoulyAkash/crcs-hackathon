@@ -11,7 +11,7 @@ import Register from "../pages/Authentication/Register";
 import ForgetPwd from "../pages/Authentication/ForgetPassword";
 
 // Dashboard
-import Dashboard from "../pages/Dashboard/index";
+import Dashboard from "../pages/Dashboard";
 import Registration from "../pages/Registration";
 import Home from "../pages/Home";
 import StateWiseSocietyList from "../pages/StateWiseSocietyList";
@@ -20,7 +20,7 @@ const authProtectedRoutes = [
   { path: "/dashboard", component: Dashboard },
   { path: "/registration", component: Registration },
   { path: "/home", component: Home },
-  { path: "/stateWiseSocietyList", component: StateWiseSocietyList },
+  { path: "/state-wise-society-list", component: StateWiseSocietyList },
 
   // //profile
   { path: "/profile", component: UserProfile },

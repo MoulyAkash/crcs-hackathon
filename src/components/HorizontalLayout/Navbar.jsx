@@ -9,8 +9,7 @@ import { withTranslation } from "react-i18next";
 
 import { connect } from "react-redux";
 
-const Navbar = props => {
-
+const Navbar = (props) => {
   const [dashboard, setdashboard] = useState(false);
   const [ui, setui] = useState(false);
   const [app, setapp] = useState(false);
@@ -88,791 +87,252 @@ const Navbar = props => {
               id="topnav-menu-content"
             >
               <ul className="navbar-nav">
-                <li className="nav-item dropdown">
+                {/* Home */}
+                <li className="nav-item">
                   <Link
                     className="nav-link dropdown-toggle arrow-none"
-                    onClick={e => {
+                    to="/dashboard"
+                  >
+                    {props.t("Home")} {props.menuOpen}
+                  </Link>
+                </li>
+
+                {/* Chart */}
+                {/* <li className="nav-item dropdown">
+                  <Link
+                    className="nav-link dropdown-toggle arrow-none"
+                    onClick={(e) => {
                       e.preventDefault();
                       setdashboard(!dashboard);
                     }}
                     to="/dashboard"
                   >
-                    <i className="bx bx-home-circle me-2"></i>
-                    {props.t("Dashboard")} {props.menuOpen}
+                    
+                    {props.t("Charts")} {props.menuOpen}
                     <div className="arrow-down"></div>
                   </Link>
                   <div
                     className={classname("dropdown-menu", { show: dashboard })}
                   >
                     <Link to="/#" className="dropdown-item">
-                      {props.t("Default")}
-                    </Link>
-                    <Link to="/home" className="dropdown-item">
-                      {props.t("Home")}
-                    </Link>
-                    <Link to="/registration" className="dropdown-item">
-                      {props.t("Registration")}
-                    </Link>
-                    <Link to="/stateWiseSocietyList" className="dropdown-item">
-                      {props.t("State Wise Society List")}
+                      {props.t("State Wise")}
                     </Link>
                     <Link to="/#" className="dropdown-item">
-                      {props.t("Crypto")}
+                      {props.t("Year Wise")}
                     </Link>
                     <Link to="/#" className="dropdown-item">
-                      {props.t("Blog")}
+                      {props.t("Type Wise")}
                     </Link>
                   </div>
-                </li>
+                </li> */}
 
+                {/* Reg. Societies */}
                 <li className="nav-item dropdown">
                   <Link
-                    to="/#"
-                    onClick={e => {
+                    className="nav-link dropdown-toggle arrow-none"
+                    onClick={(e) => {
                       e.preventDefault();
                       setui(!ui);
                     }}
-                    className="nav-link dropdown-toggle arrow-none"
+                    to="/dashboard"
                   >
-                    <i className="bx bx-tone me-2"></i>
-                    {props.t("UI Elements")} <div className="arrow-down"></div>
+                    {props.t("Reg. Societies")} {props.menuOpen}
+                    <div className="arrow-down"></div>
                   </Link>
-                  <div
-                    className={classname(
-                      "dropdown-menu mega-dropdown-menu dropdown-menu-left dropdown-mega-menu-xl",
-                      { show: ui }
-                    )}
-                  >
-                    <Row>
-                        <Col lg={4}>
-                          <div>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Alerts")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Buttons")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Cards")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Carousel")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Dropdowns")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Grid")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Images")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Lightbox")}
-                            </Link>
-                          </div>
-                        </Col>
-                        <Col lg={4}>
-                          <div>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Modals")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Offcanvas")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Range Slider")}
-                            </Link>
-                            <Link
-                              to="/#"
-                              className="dropdown-item"
-                            >
-                              {props.t("Session Timeout")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Progress Bars")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Placeholders")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Sweet-Alert")}
-                            </Link>
-                            <Link
-                              to="/#"
-                              className="dropdown-item"
-                            >
-                              {props.t("Tabs & Accordions")}
-                            </Link>
-                          </div>
-                        </Col>
-                        <Col lg={4}>
-                          <div>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Typography")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Toasts")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Video")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("General")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Colors")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Rating")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Notifications")}
-                            </Link>
-                            <Link to="/#" className="dropdown-item">
-                              {props.t("Breadcrumb")}
-                            </Link>
-                          </div>
-                        </Col>
-                      </Row>
+                  <div className={classname("dropdown-menu", { show: ui })}>
+                    <Link to="/state-wise-society-list" className="dropdown-item">
+                      {props.t("State-wise List")}
+                    </Link>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("All Reg. Societies(pdf)")}
+                    </Link>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("Calender Year-wise List")}
+                    </Link>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("Financial Year-wise List")}
+                    </Link>
                   </div>
                 </li>
 
+                {/* Forms */}
                 <li className="nav-item dropdown">
                   <Link
-                    to="/#"
-                    onClick={e => {
+                    className="nav-link dropdown-toggle arrow-none"
+                    onClick={(e) => {
                       e.preventDefault();
                       setapp(!app);
                     }}
-                    className="nav-link dropdown-togglez arrow-none"
+                    to="/dashboard"
                   >
-                    <i className="bx bx-customize me-2"></i>
-                    {props.t("Apps")} <div className="arrow-down"></div>
+                    {props.t("Forms")} {props.menuOpen}
+                    <div className="arrow-down"></div>
                   </Link>
                   <div className={classname("dropdown-menu", { show: app })}>
                     <Link to="/#" className="dropdown-item">
-                      {props.t("Calendar")}
+                      {props.t("Form I")}
                     </Link>
                     <Link to="/#" className="dropdown-item">
-                      {props.t("Chat")}
+                      {props.t("Form II")}
                     </Link>
                     <Link to="/#" className="dropdown-item">
-                      {props.t("File Manager")}
+                      {props.t("Form III")}
                     </Link>
-                    <div className="dropdown">
-                      <Link
-                        to="/#"
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setemail(!email);
-                        }}
-                      >
-                        {props.t("Email")} <div className="arrow-down"></div>
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", { show: email })}
-                      >
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Inbox")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Read Email")}
-                        </Link>
-                        <div className="dropdown">
-                          <Link
-                            className="dropdown-item dropdown-toggle arrow-none"
-                            to="/#"
-                            onClick={e => {
-                              e.preventDefault();
-                              setemail(!email);
-                            }}
-                          >
-                            <span key="t-email-templates">Templates</span>{" "}
-                            <div className="arrow-down"></div>
-                          </Link>
-                          <div
-                            className={classname("dropdown-menu", {
-                              show: email,
-                            })}
-                          >
-                            <Link
-                              to="/#"
-                              className="dropdown-item"
-                            >
-                              {props.t("Basic Action")}
-                            </Link>
-                            <Link
-                              to="/#"
-                              className="dropdown-item"
-                            >
-                              {props.t("Alert Email")}
-                            </Link>
-                            <Link
-                              to="/#"
-                              className="dropdown-item"
-                            >
-                              {props.t("Billing Email")}
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="dropdown">
-                      <Link
-                        to="/#"
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setecommerce(!ecommerce);
-                        }}
-                      >
-                        {props.t(" Ecommerce")}{" "}
-                        <div className="arrow-down"></div>
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", {
-                          show: ecommerce,
-                        })}
-                      >
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Products")}
-                        </Link>
-                        <Link
-                          to="/#"
-                          className="dropdown-item"
-                        >
-                          {props.t("Product Detail")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Orders")}
-                        </Link>
-                        <Link
-                          to="/#"
-                          className="dropdown-item"
-                        >
-                          {props.t("Customers")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Cart")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Checkout")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Shops")}
-                        </Link>
-                        <Link
-                          to="/#"
-                          className="dropdown-item"
-                        >
-                          {props.t("Add Product")}
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className="dropdown">
-                      <Link
-                        to="/#"
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setcrypto(!crypto);
-                        }}
-                      >
-                        {props.t("Crypto")} <div className="arrow-down"></div>
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", { show: crypto })}
-                      >
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Wallet")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Buy/Sell")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Exchange")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Lending")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Orders")}
-                        </Link>
-                        <Link
-                          to="/#"
-                          className="dropdown-item"
-                        >
-                          {props.t("KYC Application")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("ICO Landing")}
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className="dropdown">
-                      <Link
-                        to="/#"
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setproject(!project);
-                        }}
-                      >
-                        {props.t("Projects")} <div className="arrow-down"></div>
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", {
-                          show: project,
-                        })}
-                      >
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Projects Grid")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Projects List")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Project Overview")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Create New")}
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="dropdown">
-                      <Link
-                        to="/#"
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          settask(!task);
-                        }}
-                      >
-                        {props.t("Tasks")} <div className="arrow-down"></div>
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", { show: task })}
-                      >
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Task List")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Kanban Board")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Create Task")}
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="dropdown">
-                      <Link
-                        to="/#"
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setcontact(!contact);
-                        }}
-                      >
-                        {props.t("Contacts")} <div className="arrow-down"></div>
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", {
-                          show: contact,
-                        })}
-                      >
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("User Grid")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("User List")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Profile")}
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="dropdown">
-                      <Link
-                        to="/#"
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setBlog(!blog);
-                        }}
-                      >
-                        {props.t("Blog")} <div className="arrow-down" />
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", {
-                          show: blog,
-                        })}
-                      >
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Blog List")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Blog Grid")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Blog Details")}
-                        </Link>
-                      </div>
-                    </div>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("Form IV")}
+                    </Link>
                   </div>
                 </li>
 
+                {/* MSCS Act */}
                 <li className="nav-item dropdown">
                   <Link
-                    to="/#"
                     className="nav-link dropdown-toggle arrow-none"
-                    onClick={e => {
+                    onClick={(e) => {
                       e.preventDefault();
-                      setcomponent(!component);
+                      setemail(!email);
                     }}
+                    to="/dashboard"
                   >
-                    <i className="bx bx-collection me-2"></i>
-                    {props.t("Components")} <div className="arrow-down"></div>
+                    {props.t("MSCS Act")} {props.menuOpen}
+                    <div className="arrow-down"></div>
+                  </Link>
+                  <div className={classname("dropdown-menu", { show: email })}>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("MSCS Act,2002")}
+                    </Link>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("MSCS Rules,2002")}
+                    </Link>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("Model Bye-laws")}
+                    </Link>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("National Policy on Cooperative 2002")}
+                    </Link>
+                  </div>
+                </li>
+
+                {/* Application */}
+                <li className="nav-item dropdown">
+                  <Link
+                    className="nav-link dropdown-toggle arrow-none"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setecommerce(!ecommerce);
+                    }}
+                    to="/dashboard"
+                  >
+                    {props.t("Application")} {props.menuOpen}
+                    <div className="arrow-down"></div>
                   </Link>
                   <div
-                    className={classname("dropdown-menu", { show: component })}
+                    className={classname("dropdown-menu", { show: ecommerce })}
                   >
-                    <div className="dropdown">
-                      <Link
-                        to="/#"
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setform(!form);
-                        }}
-                      >
-                        {props.t("Forms")} <div className="arrow-down"></div>
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", { show: form })}
-                      >
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Form Elements")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Form Layouts")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Form Validation")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Form Advanced")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Form Editors")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Form File Upload")}{" "}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Form Xeditable")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Form Repeater")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Form Wizard")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Form Mask")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Transfer List")}
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="dropdown">
-                      <Link
-                        to="/#"
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          settable(!table);
-                        }}
-                      >
-                        {props.t("Tables")} <div className="arrow-down"></div>
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", { show: table })}
-                      >
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Basic Tables")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Data Tables")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Responsive Table")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Editable Table")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Drag & Drop Table")}
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="dropdown">
-                      <Link
-                        to="/#"
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setchart(!chart);
-                        }}
-                      >
-                        {props.t("Charts")} <div className="arrow-down"></div>
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", { show: chart })}
-                      >
-                        <Link to="#" className="dropdown-item">
-                          {" "}
-                          {props.t("Apex charts")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {" "}
-                          {props.t("Chartjs Chart")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {" "}
-                          {props.t("E Chart")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {" "}
-                          {props.t("Sparkline Chart")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Knob Chart")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Re Chart")}
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="dropdown">
-                      <Link
-                        to="/#"
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          seticon(!icon);
-                        }}
-                      >
-                        {props.t("Icons")} <div className="arrow-down"></div>
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", { show: icon })}
-                      >
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Boxicons")}
-                        </Link>
-                        <Link
-                          to="#"
-                          className="dropdown-item"
-                        >
-                          {props.t("Material Design")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Dripicons")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Font awesome")}{" "}
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="dropdown">
-                      <Link
-                        to="/#"
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setmap(!map);
-                        }}
-                      >
-                        {props.t("Maps")} <div className="arrow-down"></div>
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", { show: map })}
-                      >
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Google Maps")}{" "}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Vector Maps")}{" "}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Leaflet Maps")}{" "}
-                        </Link>
-                      </div>
-                    </div>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("Received Application")}
+                    </Link>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("Status of Application")}
+                    </Link>
                   </div>
                 </li>
 
+                {/* MSCS-MIS */}
                 <li className="nav-item dropdown">
                   <Link
                     className="nav-link dropdown-toggle arrow-none"
-                    to="/#"
-                    onClick={e => {
+                    onClick={(e) => {
                       e.preventDefault();
-                      setextra(!extra);
+                      setcrypto(!crypto);
                     }}
+                    to="/dashboard"
                   >
-                    <i className="bx bx-file me-2"></i>
-                    {props.t("Extra pages")} <div className="arrow-down"></div>
+                    {props.t("MSCS-MIS")} {props.menuOpen}
+                    <div className="arrow-down"></div>
                   </Link>
-                  <div className={classname("dropdown-menu", { show: extra })}>
-                    <div className="dropdown">
-                      <Link
-                        to="/#"
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setinvoice(!invoice);
-                        }}
-                      >
-                        {props.t("Invoices")} <div className="arrow-down"></div>
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", {
-                          show: invoice,
-                        })}
-                      >
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Invoice List")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Invoice Detail")}
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className="dropdown">
-                      <Link
-                        to="/#"
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setauth(!auth);
-                        }}
-                      >
-                        {props.t("Authentication")}{" "}
-                        <div className="arrow-down"></div>
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", { show: auth })}
-                      >
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Login")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Login 2")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Register")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Register 2")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Recover Password")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Recover Password 2")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Lock Screen")}
-                        </Link>
-                        <Link to="/#" className="dropdown-item">
-                          {props.t("Lock Screen 2")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Confirm Mail")}
-                        </Link>
-                        <Link
-                          to="/#"
-                          className="dropdown-item"
-                        >
-                          {props.t("Confirm Mail 2")}
-                        </Link>
-                        <Link
-                          to="#"
-                          className="dropdown-item"
-                        >
-                          {props.t("Email Verification")}
-                        </Link>
-                        <Link
-                          to="#"
-                          className="dropdown-item"
-                        >
-                          {props.t("Email Verification 2")}
-                        </Link>
-                        <Link
-                          to="#"
-                          className="dropdown-item"
-                        >
-                          {props.t("Two Step Verification")}
-                        </Link>
-                        <Link
-                          to="#"
-                          className="dropdown-item"
-                        >
-                          {props.t("Two Step Verification 2")}
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className="dropdown">
-                      <Link
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        to="/#"
-                        onClick={e => {
-                          e.preventDefault();
-                          setutility(!utility);
-                        }}
-                      >
-                        {props.t("Utility")} <div className="arrow-down"></div>
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", {
-                          show: utility,
-                        })}
-                      >
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Starter Page")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Maintenance")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Coming Soon")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Timeline")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("FAQs")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Pricing")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Error 404")}
-                        </Link>
-                        <Link to="#" className="dropdown-item">
-                          {props.t("Error 500")}
-                        </Link>
-                      </div>
-                    </div>
+                  <div className={classname("dropdown-menu", { show: crypto })}>
+                    <Link to="/registration" className="dropdown-item">
+                      {props.t("New User Registration")}
+                    </Link>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("User Login")}
+                    </Link>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("Admin User")}
+                    </Link>
                   </div>
+                </li>
+
+                {/* Reports */}
+                <li className="nav-item dropdown">
+                  <Link
+                    className="nav-link dropdown-toggle arrow-none"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setproject(!project);
+                    }}
+                    to="/dashboard"
+                  >
+                    {props.t("Reports")} {props.menuOpen}
+                    <div className="arrow-down"></div>
+                  </Link>
+                  <div
+                    className={classname("dropdown-menu", { show: project })}
+                  >
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("All Reg Societies ")}
+                    </Link>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("Registered Users")}
+                    </Link>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("Filed Annual Returns Online")}
+                    </Link>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("Annual Returns : Offline")}
+                    </Link>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("Reminder Message")}
+                    </Link>
+                  </div>
+                </li>
+
+                {/* Liquidation */}
+                {/* <li className="nav-item dropdown">
+                  <Link
+                    className="nav-link dropdown-toggle arrow-none"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      settask(!task);
+                    }}
+                    to="/dashboard"
+                  >
+                    
+                    {props.t("Liquidation")} {props.menuOpen}
+                    <div className="arrow-down"></div>
+                  </Link>
+                  <div className={classname("dropdown-menu", { show: task })}>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("Societies under Liquidation")}
+                    </Link>
+                    <Link to="/#" className="dropdown-item">
+                      {props.t("Liquidation Process Initiated")}
+                    </Link>
+                  </div>
+                </li> */}
+
+                {/* Bank */}
+                <li className="nav-item">
+                  <Link
+                    className="nav-link dropdown-toggle arrow-none"
+                    onClick={(e) => {
+                      e.preventDefault();
+                    }}
+                    to="/dashboard"
+                  >
+                    {props.t("Bank")} {props.menuOpen}
+                  </Link>
                 </li>
               </ul>
             </Collapse>
@@ -890,7 +350,7 @@ Navbar.propTypes = {
   t: PropTypes.any,
 };
 
-const mapStatetoProps = state => {
+const mapStatetoProps = (state) => {
   const { leftMenu } = state.Layout;
   return { leftMenu };
 };

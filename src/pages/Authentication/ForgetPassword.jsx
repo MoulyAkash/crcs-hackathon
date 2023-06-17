@@ -1,6 +1,17 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { Row, Col, Alert, Card, CardBody, Container, FormFeedback, Input, Label, Form } from "reactstrap";
+import {
+  Row,
+  Col,
+  Alert,
+  Card,
+  CardBody,
+  Container,
+  FormFeedback,
+  Input,
+  Label,
+  Form,
+} from "reactstrap";
 
 //redux
 import { useSelector, useDispatch } from "react-redux";
@@ -16,11 +27,12 @@ import { userForgetPassword } from "../../store/actions";
 
 // import images
 import profile from "../../assets/images/profile-img.png";
-import logo from "../../assets/images/logo.svg";
+import logo from "../../assets/MSCS_LOGO.png";
 
-const ForgetPasswordPage = props => {
+const ForgetPasswordPage = (props) => {
   //meta title
-  document.title="Forget Password | Skote - Vite React Admin & Dashboard Template";
+  document.title =
+    "Forget Password | Skote - Vite React Admin & Dashboard Template";
   const dispatch = useDispatch();
 
   const validation = useFormik({
@@ -28,23 +40,23 @@ const ForgetPasswordPage = props => {
     enableReinitialize: true,
 
     initialValues: {
-      email: '',
+      email: "",
     },
     validationSchema: Yup.object({
       email: Yup.string().required("Please Enter Your Email"),
     }),
     onSubmit: (values) => {
       dispatch(userForgetPassword(values, props.history));
-    }
+    },
   });
 
-  const { forgetError, forgetSuccessMsg } = useSelector(state => ({
+  const { forgetError, forgetSuccessMsg } = useSelector((state) => ({
     forgetError: state.ForgetPassword.forgetError,
     forgetSuccessMsg: state.ForgetPassword.forgetSuccessMsg,
   }));
 
   return (
-    <React.Fragment>     
+    <React.Fragment>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
           <i className="fas fa-home h2" />
@@ -71,13 +83,16 @@ const ForgetPasswordPage = props => {
                 <CardBody className="pt-0">
                   <div>
                     <Link to="/">
-                      <div className="avatar-md profile-user-wid mb-4">
+                      <div
+                        className="avatar-md profile-user-wid mb-4"
+                        style={{ overflow: "hidden" }}
+                      >
                         <span className="avatar-title rounded-circle bg-light">
                           <img
                             src={logo}
                             alt=""
                             className="rounded-circle"
-                            height="34"
+                            height="64"
                           />
                         </span>
                       </div>
@@ -114,11 +129,15 @@ const ForgetPasswordPage = props => {
                           onBlur={validation.handleBlur}
                           value={validation.values.email || ""}
                           invalid={
-                            validation.touched.email && validation.errors.email ? true : false
+                            validation.touched.email && validation.errors.email
+                              ? true
+                              : false
                           }
                         />
                         {validation.touched.email && validation.errors.email ? (
-                          <FormFeedback type="invalid">{validation.errors.email}</FormFeedback>
+                          <FormFeedback type="invalid">
+                            {validation.errors.email}
+                          </FormFeedback>
                         ) : null}
                       </div>
                       <Row className="mb-3">
@@ -136,15 +155,23 @@ const ForgetPasswordPage = props => {
                 </CardBody>
               </Card>
               <div className="mt-5 text-center">
-                <p>
-                  Go back to{" "}
-                  <Link to="login" className="font-weight-medium text-primary">
-                    Login
+                <p
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "4px",
+                    justifyContent: "center",
+                  }}
+                >
+                  <span>Go to home page </span>
+                  <Link to="/" className="fw-medium text-primary">
+                    {" "}
+                    <i className="mdi mdi-18px mdi-home"></i>
                   </Link>{" "}
                 </p>
                 <p>
-                  © {new Date().getFullYear()} Skote. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger" /> by Themesbrand
+                  © {new Date().getFullYear()} Central Registrar for Cooperative
+                  Societies.
                 </p>
               </div>
             </Col>
