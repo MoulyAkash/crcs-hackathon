@@ -3,6 +3,7 @@ import { Row, Col, Card, CardBody, CardTitle, Container } from "reactstrap";
 import MiniWidget from "../../components/Common/mini-widget";
 import NewsEvents from "../../components/Common/NewsEvents";
 import SectorDistribution from "../../components/Common/SectorDistribution";
+import Breadcrumbs from "../../components/Common/Breadcrumb";
 import MapStat from "../../components/Common/MapStat";
 import { Tooltip } from "react-tooltip";
 
@@ -139,6 +140,7 @@ const Dashboard = () => {
     <React.Fragment>
       <div className="page-content">
         <Container fluid>
+          <Breadcrumbs title="Home" breadcrumbItem="Dashboard" />
           <Row>
             <MiniWidget reports={reports} />
           </Row>
