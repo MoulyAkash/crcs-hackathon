@@ -15,12 +15,14 @@ import Dashboard from "../pages/Dashboard";
 import Registration from "../pages/Registration";
 import Home from "../pages/Home";
 import StateWiseSocietyList from "../pages/StateWiseSocietyList";
+import AllRegSocieties from "../pages/AllRegSocieties";
 
 const authProtectedRoutes = [
   { path: "/dashboard", component: Dashboard },
   { path: "/registration", component: Registration },
   { path: "/home", component: Home },
   { path: "/state-wise-society-list", component: StateWiseSocietyList },
+  { path: "/all-reg-crcs", component: AllRegSocieties },
 
   // //profile
   { path: "/profile", component: UserProfile },
