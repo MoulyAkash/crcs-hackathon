@@ -286,7 +286,7 @@ const Navbar = (props) => {
                   <div
                     className={classname("dropdown-menu", { show: project })}
                   >
-                    <Link to="/#" className="dropdown-item">
+                    <Link to="/all-reg-crcs" className="dropdown-item">
                       {props.t("All Reg Societies ")}
                     </Link>
                     <Link to="/#" className="dropdown-item">
@@ -294,12 +294,6 @@ const Navbar = (props) => {
                     </Link>
                     <Link to="/filled-ar-offline" className="dropdown-item">
                       {props.t("Filed Annual Returns Online")}
-                    </Link>
-                    <Link to="/#" className="dropdown-item">
-                      {props.t("Annual Returns : Offline")}
-                    </Link>
-                    <Link to="/#" className="dropdown-item">
-                      {props.t("Reminder Message")}
                     </Link>
                   </div>
                 </li>
