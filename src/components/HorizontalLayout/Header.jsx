@@ -76,12 +76,13 @@ const Header = (props) => {
     <header
       // id="page-topbar"
       style={{
-        backgroundImage: `url(${background})`,
+        // backgroundImage: `url(${background})`,
+        background: "#171941",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         boxShadow: "none",
-        backgroundSize: "auto",
+        // backgroundSize: "",
       }}
     >
       <div style={{ backdropFilter: "blur(7px)" }}>

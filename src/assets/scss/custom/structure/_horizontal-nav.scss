@@ -246,7 +246,7 @@ body[data-layout="horizontal"] {
     }
 
     .topnav {
-      background-color: $primary;
+      background-color: #1d8cf8;
       .navbar-nav {
         .nav-link {
           color: rgba($white, 0.6);
@@ -323,7 +323,7 @@ body[data-layout="horizontal"][data-topbar="colored"] {
 
   @include media-breakpoint-up(lg) {
     .topnav {
-      background-color: $primary;
+      background-color: #3479fe;
       .navbar-nav {
         .nav-link {
           color: rgba($white, 0.6);
