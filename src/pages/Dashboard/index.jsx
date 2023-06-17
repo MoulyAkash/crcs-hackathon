@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row } from "reactstrap";
 import MiniWidget from "../../components/Common/mini-widget";
+import Activity from "../../components/Common/Activity";
 
 const series1 = [
   { name: "Reg. Societies", data: [12, 14, 2, 47, 42, 15, 47, 75, 65, 19, 14] },
@@ -137,6 +138,10 @@ const Dashboard = () => {
         <Container fluid>
           <Row>
             <MiniWidget reports={reports} />
+          </Row>
+
+          <Row>
+            <Activity />
           </Row>
         </Container>
       </div>

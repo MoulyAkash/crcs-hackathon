@@ -71,7 +71,7 @@ const Header = (props) => {
         id="page-topbar"
         style={{
           backgroundImage: `url(${background})`,
-          // backgroundSize: "cover",
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           boxShadow: "none",
