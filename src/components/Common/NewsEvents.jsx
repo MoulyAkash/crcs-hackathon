@@ -76,162 +76,157 @@ const data = [
   },
 ];
 
-const NewsEvents = (props) => {
+const NewsEvents = () => {
   return (
-    <React.Fragment>
-      <Col xl={5}>
-        <Card>
-          <CardBody>
-            <div className="d-flex">
-              <div className="me-2">
-                <h2
-                  className="card-title mb-4"
-                  style={{
-                    fontSize: "18px",
-                  }}
+    <Card>
+      <h5
+        className="card-header bg-transparent border-bottom"
+        style={{
+          fontSize: "18px",
+          paddingTop: "16px",
+          paddingBottom: "16px",
+          fontWeight: "600",
+        }}
+      >
+        New/Events
+      </h5>
+      <CardBody>
+        <SimpleBar style={{ maxHeight: "300px" }}>
+          <div className="mt-2">
+            <ul className="verti-timeline list-unstyled">
+              {data.map((item, index) => (
+                <li
+                  key={index}
+                  className={`event-list ${index === 0 && "active"}`}
                 >
-                  New/Events
-                </h2>
-              </div>
-            </div>
-            <SimpleBar style={{ maxHeight: "280px" }}>
-              <div className="mt-2">
-                <ul className="verti-timeline list-unstyled">
-                  {data.map((item, index) => (
-                    <li
-                      key={index}
-                      className={`event-list ${index === 0 && "active"}`}
-                    >
-                      <div className="event-timeline-dot">
-                        <i
-                          className={`bx bxs-right-arrow-circle font-size-18 ${
-                            index === 0 && "bx-fade-right"
-                          }`}
-                        ></i>
-                      </div>
-                      <div className="d-flex">
-                        <div className="me-3" style={{ minWidth: "80px" }}>
-                          <h5 className="font-size-14">
-                            {item.date}{" "}
-                            <i className="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i>
-                          </h5>
-                        </div>
+                  <div className="event-timeline-dot">
+                    <i
+                      className={`bx bxs-right-arrow-circle font-size-18 ${
+                        index === 0 && "bx-fade-right"
+                      }`}
+                    ></i>
+                  </div>
+                  <div className="d-flex">
+                    <div className="me-3" style={{ minWidth: "80px" }}>
+                      <h5 className="font-size-14">
+                        {item.date}{" "}
+                        <i className="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i>
+                      </h5>
+                    </div>
 
-                        <div style={{ flex: 1 }}>
-                          <div>{item.text}</div>
-                        </div>
-                      </div>
-                    </li>
-                  ))}
+                    <div style={{ flex: 1 }}>
+                      <div>{item.text}</div>
+                    </div>
+                  </div>
+                </li>
+              ))}
 
-                  <li className="event-list">
-                    <div className="event-timeline-dot">
-                      <i className="bx bxs-right-arrow-circle font-size-18"></i>
+              <li className="event-list">
+                <div className="event-timeline-dot">
+                  <i className="bx bxs-right-arrow-circle font-size-18"></i>
+                </div>
+                <div className="d-flex">
+                  <div className="me-3" style={{ minWidth: "80px" }}>
+                    <h5 className="font-size-14">
+                      10 Nov{" "}
+                      <i className="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i>
+                    </h5>
+                  </div>
+                  <div className="flex-grow-1">
+                    <div>
+                      Posted{" "}
+                      <span className="font-weight-semibold">
+                        Beautiful Day with Friends
+                      </span>{" "}
+                      blog... <a href="#">View</a>
                     </div>
-                    <div className="d-flex">
-                      <div className="me-3" style={{ minWidth: "80px" }}>
-                        <h5 className="font-size-14">
-                          10 Nov{" "}
-                          <i className="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i>
-                        </h5>
-                      </div>
-                      <div className="flex-grow-1">
-                        <div>
-                          Posted{" "}
-                          <span className="font-weight-semibold">
-                            Beautiful Day with Friends
-                          </span>{" "}
-                          blog... <a href="#">View</a>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
+                  </div>
+                </div>
+              </li>
 
-                  <li className="event-list">
-                    <div className="event-timeline-dot">
-                      <i className="bx bx-right-arrow-circle font-size-18"></i>
+              <li className="event-list">
+                <div className="event-timeline-dot">
+                  <i className="bx bx-right-arrow-circle font-size-18"></i>
+                </div>
+                <div className="d-flex">
+                  <div className="me-3" style={{ minWidth: "80px" }}>
+                    <h5 className="font-size-14">
+                      08 Nov{" "}
+                      <i className="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i>
+                    </h5>
+                  </div>
+                  <div className="flex-grow-1">
+                    <div>
+                      If several languages coalesce, the grammar of the
+                      resulting... <a href="#">Read</a>
                     </div>
-                    <div className="d-flex">
-                      <div className="me-3" style={{ minWidth: "80px" }}>
-                        <h5 className="font-size-14">
-                          08 Nov{" "}
-                          <i className="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i>
-                        </h5>
-                      </div>
-                      <div className="flex-grow-1">
-                        <div>
-                          If several languages coalesce, the grammar of the
-                          resulting... <a href="#">Read</a>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
+                  </div>
+                </div>
+              </li>
 
-                  <li className="event-list">
-                    <div className="event-timeline-dot">
-                      <i className="bx bx-right-arrow-circle font-size-18"></i>
+              <li className="event-list">
+                <div className="event-timeline-dot">
+                  <i className="bx bx-right-arrow-circle font-size-18"></i>
+                </div>
+                <div className="d-flex">
+                  <div className="me-3" style={{ minWidth: "80px" }}>
+                    <h5 className="font-size-14">
+                      02 Nov{" "}
+                      <i className="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i>
+                    </h5>
+                  </div>
+                  <div className="flex-grow-1">
+                    <div>
+                      Create{" "}
+                      <span className="font-weight-semibold">
+                        Drawing a sketch blog
+                      </span>
                     </div>
-                    <div className="d-flex">
-                      <div className="me-3" style={{ minWidth: "80px" }}>
-                        <h5 className="font-size-14">
-                          02 Nov{" "}
-                          <i className="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i>
-                        </h5>
-                      </div>
-                      <div className="flex-grow-1">
-                        <div>
-                          Create{" "}
-                          <span className="font-weight-semibold">
-                            Drawing a sketch blog
-                          </span>
-                        </div>
-                      </div>
+                  </div>
+                </div>
+              </li>
+              <li className="event-list">
+                <div className="event-timeline-dot">
+                  <i className="bx bx-right-arrow-circle font-size-18"></i>
+                </div>
+                <div className="d-flex">
+                  <div className="me-3" style={{ minWidth: "80px" }}>
+                    <h5 className="font-size-14">
+                      24 Oct{" "}
+                      <i className="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i>
+                    </h5>
+                  </div>
+                  <div className="flex-grow-1">
+                    <div>
+                      In enim justo, rhoncus ut, imperdiet a venenatis vitae
                     </div>
-                  </li>
-                  <li className="event-list">
-                    <div className="event-timeline-dot">
-                      <i className="bx bx-right-arrow-circle font-size-18"></i>
+                  </div>
+                </div>
+              </li>
+              <li className="event-list">
+                <div className="event-timeline-dot">
+                  <i className="bx bx-right-arrow-circle font-size-18"></i>
+                </div>
+                <div className="d-flex">
+                  <div className="me-3" style={{ minWidth: "80px" }}>
+                    <h5 className="font-size-14">
+                      21 Oct{" "}
+                      <i className="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i>
+                    </h5>
+                  </div>
+                  <div className="flex-grow-1">
+                    <div>
+                      Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+                      aut
                     </div>
-                    <div className="d-flex">
-                      <div className="me-3" style={{ minWidth: "80px" }}>
-                        <h5 className="font-size-14">
-                          24 Oct{" "}
-                          <i className="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i>
-                        </h5>
-                      </div>
-                      <div className="flex-grow-1">
-                        <div>
-                          In enim justo, rhoncus ut, imperdiet a venenatis vitae
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="event-list">
-                    <div className="event-timeline-dot">
-                      <i className="bx bx-right-arrow-circle font-size-18"></i>
-                    </div>
-                    <div className="d-flex">
-                      <div className="me-3" style={{ minWidth: "80px" }}>
-                        <h5 className="font-size-14">
-                          21 Oct{" "}
-                          <i className="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i>
-                        </h5>
-                      </div>
-                      <div className="flex-grow-1">
-                        <div>
-                          Nemo enim ipsam voluptatem quia voluptas sit
-                          aspernatur aut
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </SimpleBar>
-          </CardBody>
-        </Card>
-      </Col>
-    </React.Fragment>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </SimpleBar>
+      </CardBody>
+    </Card>
   );
 };
 

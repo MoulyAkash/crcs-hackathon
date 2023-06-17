@@ -1,10 +1,19 @@
 import React from "react";
-import { Row, Col, Card, CardBody, CardTitle, Container } from "reactstrap";
+import {
+  Row,
+  Col,
+  CardText,
+  Card,
+  CardBody,
+  CardTitle,
+  Container,
+} from "reactstrap";
 import MiniWidget from "../../components/Common/mini-widget";
 import NewsEvents from "../../components/Common/NewsEvents";
 import SectorDistribution from "../../components/Common/SectorDistribution";
 import MapStat from "../../components/Common/MapStat";
 import { Tooltip } from "react-tooltip";
+import TrainingProgram from "../../components/Common/TrainingProgram";
 
 const series1 = [
   { name: "Reg. Societies", data: [12, 14, 2, 47, 42, 15, 47, 75, 65, 19, 14] },
@@ -144,42 +153,102 @@ const Dashboard = () => {
           </Row>
 
           <Row>
-            {/* State wise  */}
-            <Col lg="5">
+            <Col lg={8}>
               <Card>
+                <h5
+                  className="card-header bg-transparent border-bottom"
+                  style={{
+                    fontSize: "18px",
+                    paddingTop: "16px",
+                    paddingBottom: "16px",
+                    fontWeight: "600",
+                  }}
+                >
+                  Geographic Distribution
+                </h5>
+
+                <div
+                  style={{
+                    display: "flex",
+                    gap: "10px",
+                    alignItems: "flex-end",
+                    margin: "12px 0",
+                    background: "#efeff4",
+                    width: "max-content",
+                    padding: "10px",
+                    borderRadius: "5px",
+                    position: "absolute",
+                    top: "10px",
+                    right: "-10px",
+                    boxShadow:
+                      "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
+                  }}
+                >
+                  <h2 className="m-0">9,18,456</h2>
+
+                  <div style={{ fontSize: "14px" }}>
+                    <span style={{ color: "#1F8A70", fontWeight: 600 }}>
+                      <i className="bx bx-up-arrow-alt" /> +5.01%
+                    </span>
+
+                    <span style={{ marginLeft: "7px", fontWeight: 500 }}>
+                      Since last year
+                    </span>
+                  </div>
+                </div>
+
                 <CardBody>
-                  <CardTitle
-                    style={{
-                      fontSize: "18px",
-                    }}
-                  >
-                    Sector-wise Distribution
-                  </CardTitle>
+                  <MapStat />
+                  <Tooltip id="map-stat" />
+                </CardBody>
+              </Card>
+
+              <Row>
+                <Col lg="6">
+                  <Card>
+                    <h5
+                      className="card-header bg-transparent border-bottom"
+                      style={{
+                        fontSize: "18px",
+                        paddingTop: "16px",
+                        paddingBottom: "16px",
+                        fontWeight: "600",
+                      }}
+                    >
+                      Training Programs
+                    </h5>
+
+                    <CardBody>
+                      <TrainingProgram />
+                    </CardBody>
+                  </Card>
+                </Col>
+
+                {/* News and Events */}
+                <Col xl={6}>
+                  <NewsEvents />
+                </Col>
+              </Row>
+            </Col>
+
+            <Col lg={4} style={{ height: "100%" }}>
+              <Card>
+                <h5
+                  className="card-header bg-transparent border-bottom"
+                  style={{
+                    fontSize: "18px",
+                    paddingTop: "16px",
+                    paddingBottom: "16px",
+                    fontWeight: "600",
+                  }}
+                >
+                  Sector-wise Distribution
+                </h5>
+
+                <CardBody>
                   <div id="sector-distribution-chart" className="e-chart">
                     <SectorDistribution />
                   </div>
-                </CardBody>
-              </Card>
-            </Col>
-
-            {/* News and Events */}
-            <NewsEvents />
-          </Row>
-
-          <Row>
-            <Col lg={8}>
-              <Card>
-                <CardBody>
-                  <CardTitle
-                    style={{
-                      fontSize: "18px",
-                    }}
-                  >
-                    Geographic Distribution
-                  </CardTitle>
-
-                  <MapStat />
-                  <Tooltip id="map-stat" />
                 </CardBody>
               </Card>
             </Col>
