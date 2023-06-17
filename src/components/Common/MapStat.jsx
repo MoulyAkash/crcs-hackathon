@@ -48,34 +48,10 @@ const MapStat = () => {
     <Row
       style={{
         alignItems: "center",
+        position: "relative",
       }}
     >
       <Col lg={5}>
-        <div
-          style={{
-            display: "flex",
-            gap: "10px",
-            alignItems: "flex-end",
-            margin: "12px 0",
-            background: "#EEEEEE",
-            width: "max-content",
-            padding: "10px",
-            borderRadius: "5px",
-          }}
-        >
-          <h2 className="m-0">9,18,456</h2>
-
-          <div style={{ fontSize: "14px" }}>
-            <span style={{ color: "#1F8A70", fontWeight: 600 }}>
-              <i className="bx bx-up-arrow-alt" /> +5.01%
-            </span>
-
-            <span style={{ marginLeft: "7px", fontWeight: 500 }}>
-              Since last year
-            </span>
-          </div>
-        </div>
-
         <ComposableMap
           projectionConfig={{
             rotate: [-34, -30, 0],

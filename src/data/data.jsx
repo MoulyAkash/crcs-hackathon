@@ -1752,7 +1752,7 @@ export const mscsPDF = [
     formName: "National Policy on Cooperatives, 2002",
     formSize: "0.5 MB",
     file: NatPolicy02,
-  }
+  },
 ];
 
 export const annularReportOffline = [

@@ -23,7 +23,7 @@ const SectorDistribution = () => {
     },
     legend: {
       orient: "vertical",
-      left: "left",
+      left: "top",
       data: Object.keys(data.sectorDistribution),
       textStyle: {
         color: ["#74788d"],
