@@ -140,11 +140,14 @@ const Navbar = (props) => {
                     <div className="arrow-down"></div>
                   </Link>
                   <div className={classname("dropdown-menu", { show: ui })}>
-                    <Link to="/state-wise-society-list" className="dropdown-item">
+                    <Link
+                      to="/state-wise-society-list"
+                      className="dropdown-item"
+                    >
                       {props.t("State-wise List")}
                     </Link>
-                    <Link to="/#" className="dropdown-item">
-                      {props.t("All Reg. Societies(pdf)")}
+                    <Link to="/all-reg-crcs" className="dropdown-item">
+                      {props.t("All Reg. Societies")}
                     </Link>
                     <Link to="/#" className="dropdown-item">
                       {props.t("Calender Year-wise List")}

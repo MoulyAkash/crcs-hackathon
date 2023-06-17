@@ -1,5 +1,5 @@
+/* eslint-disable react/prop-types */
 import React, { Fragment } from "react";
-import PropTypes from "prop-types";
 import {
   useTable,
   useGlobalFilter,
@@ -11,6 +11,7 @@ import {
 } from "react-table";
 import { Table, Row, Col, Button, Input } from "reactstrap";
 import { Filter, DefaultColumnFilter } from "./filters";
+import "./TableContainer.css";
 
 // Define a default UI for filtering
 function GlobalFilter({
@@ -179,15 +180,17 @@ const TableContainer = ({
           <thead className="table-light table-nowrap">
             {headerGroups.map((headerGroup) => (
               <tr key={headerGroup.id} {...headerGroup.getHeaderGroupProps()}>
-                {headerGroup.headers.map((column) => (
-                  <th key={column.id}>
-                    <div className="mb-2" {...column.getSortByToggleProps()}>
-                      {column.render("Header")}
-                      {generateSortingIndicator(column)}
-                    </div>
-                    <Filter column={column} />
-                  </th>
-                ))}
+                {headerGroup.headers.map((column) => {
+                  return (
+                    <th key={column.id}>
+                      <div className="mb-2" {...column.getSortByToggleProps()}>
+                        {column.render("Header")}
+                        {generateSortingIndicator(column)}
+                      </div>
+                      <Filter column={column} />
+                    </th>
+                  );
+                })}
               </tr>
             ))}
           </thead>
@@ -195,6 +198,7 @@ const TableContainer = ({
           <tbody {...getTableBodyProps()}>
             {page.map((row) => {
               prepareRow(row);
+
               return (
                 <Fragment key={row.getRowProps().key}>
                   <tr>
@@ -219,6 +223,9 @@ const TableContainer = ({
             className="form-select"
             value={pageSize}
             onChange={onChangeInSelect}
+            style={{
+              minWidth: "100px",
+            }}
           >
             {[10, 20, 30, 40, 50].map((pageSize) => (
               <option key={pageSize} value={pageSize}>
@@ -289,10 +296,6 @@ const TableContainer = ({
       </Row>
     </Fragment>
   );
-};
-
-TableContainer.propTypes = {
-  preGlobalFilteredRows: PropTypes.any,
 };
 
 export default TableContainer;

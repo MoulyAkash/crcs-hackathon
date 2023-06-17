@@ -60,7 +60,7 @@ const MapStat = () => {
             background: "#EEEEEE",
             width: "max-content",
             padding: "10px",
-            borderRadius: "10px",
+            borderRadius: "5px",
           }}
         >
           <h2 className="m-0">9,18,456</h2>
@@ -70,7 +70,7 @@ const MapStat = () => {
               <i className="bx bx-up-arrow-alt" /> +5.01%
             </span>
 
-            <span style={{ marginLeft: "10px", fontWeight: 500 }}>
+            <span style={{ marginLeft: "7px", fontWeight: 500 }}>
               Since last year
             </span>
           </div>
