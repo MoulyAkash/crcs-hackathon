@@ -113,8 +113,8 @@ const Navbar = props => {
                     <Link to="/registration" className="dropdown-item">
                       {props.t("Registration")}
                     </Link>
-                    <Link to="/registeredSocieties" className="dropdown-item">
-                      {props.t("Registered Societies")}
+                    <Link to="/stateWiseSocietyList" className="dropdown-item">
+                      {props.t("State Wise Society List")}
                     </Link>
                     <Link to="/#" className="dropdown-item">
                       {props.t("Crypto")}

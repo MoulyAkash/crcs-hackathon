@@ -7,7 +7,6 @@ import "./i18n"
 import { Provider } from "react-redux"
 import store  from "./store";
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.Fragment>
     <Provider store={store}>

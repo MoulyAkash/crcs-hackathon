@@ -1,160 +1,285 @@
 export const stateWiseList = [
   {
-    id: "1",
-    state: "ANDHRA PRADESH",
-    societyNum: "21",
+    id: "geo-0",
+    state: "Andaman and Nicobar",
+    societyNum: 0,
   },
   {
-    id: "2",
-    state: "ARUNACHAL PRADESH",
-    societyNum: "1",
+    id: "geo-1",
+    state: "Andhra Pradesh",
+    societyNum: 21,
   },
   {
-    id: "3",
-    state: "ASSAM",
-    societyNum: "6",
+    id: "geo-2",
+    state: "Arunachal Pradesh",
+    societyNum: 1,
   },
   {
-    id: "4",
-    state: "BIHAR",
-    societyNum: "19",
+    id: "geo-3",
+    state: "Assam",
+    societyNum: 6,
   },
   {
-    id: "5",
-    state: "CHANDIGARH",
-    societyNum: "1",
+    id: "geo-4",
+    state: "Bihar",
+    societyNum: 19,
   },
   {
-    id: "6",
-    state: "CHHATTISGARH",
-    societyNum: "8",
+    id: "geo-5",
+    state: "Chandigarh",
+    societyNum: 1,
   },
   {
-    id: "7",
-    state: "DADRA AND NAGAR HAVELI",
-    societyNum: "1",
+    id: "geo-6",
+    state: "Chhattisgarh",
+    societyNum: 8,
   },
   {
-    id: "8",
-    state: "GOA",
-    societyNum: "2",
+    id: "geo-7",
+    state: "Dadra and Nagar Haveli",
+    societyNum: 1,
   },
   {
-    id: "9",
-    state: "GUJARAT",
-    societyNum: "43",
+    id: "geo-8",
+    state: "Daman and Diu",
+    societyNum: 0,
   },
   {
-    id: "10",
-    state: "HARYANA",
-    societyNum: "19",
+    id: "geo-9",
+    state: "Delhi",
+    societyNum: 0,
   },
   {
-    id: "11",
-    state: "HIMACHAL PRADESH",
-    societyNum: "1",
+    id: "geo-10",
+    state: "Goa",
+    societyNum: 2,
   },
   {
-    id: "12",
-    state: "JAMMU AND KASHMIR",
-    societyNum: "2",
+    id: "geo-11",
+    state: "Gujarat",
+    societyNum: 43,
   },
   {
-    id: "13",
-    state: "JHARKHAND",
-    societyNum: "9",
+    id: "geo-12",
+    state: "Haryana",
+    societyNum: 19,
   },
   {
-    id: "14",
-    state: "KARNATAKA",
-    societyNum: "28",
+    id: "geo-13",
+    state: "Himachal Pradesh",
+    societyNum: 1,
   },
   {
-    id: "15",
-    state: "KERALA",
-    societyNum: "33",
+    id: "geo-14",
+    state: "Jammu and Kashmir",
+    societyNum: 2,
   },
   {
-    id: "16",
-    state: "MADHYA PRADESH",
-    societyNum: "29",
+    id: "geo-15",
+    state: "Jharkhand",
+    societyNum: 9,
   },
   {
-    id: "17",
-    state: "MAHARASHTRA",
-    societyNum: "601",
+    id: "geo-16",
+    state: "Karnataka",
+    societyNum: 28,
   },
   {
-    id: "18",
-    state: "MANIPUR",
-    societyNum: "4",
+    id: "geo-17",
+    state: "Kerala",
+    societyNum: 33,
   },
   {
-    id: "19",
-    state: "NAGALAND",
-    societyNum: "1",
+    id: "geo-18",
+    state: "Lakshadweep",
+    societyNum: 0,
   },
   {
-    id: "20",
-    state: "NEW DELHI",
-    societyNum: "39",
+    id: "geo-19",
+    state: "Madhya Pradesh",
+    societyNum: 29,
   },
   {
-    id: "21",
-    state: "ODISHA",
-    societyNum: "31",
+    id: "geo-20",
+    state: "Maharashtra",
+    societyNum: 601,
   },
   {
-    id: "22",
-    state: "PONDICHERRY",
-    societyNum: "1",
+    id: "geo-21",
+    state: "Manipur",
+    societyNum: 4,
   },
   {
-    id: "23",
-    state: "PUNJAB",
-    societyNum: "8",
+    id: "geo-22",
+    state: "Meghalaya",
+    societyNum: 0,
   },
   {
-    id: "24",
-    state: "RAJASTHAN",
-    societyNum: "37",
+    id: "geo-23",
+    state: "Mizoram",
+    societyNum: 0,
   },
   {
-    id: "25",
-    state: "SIKKIM",
-    societyNum: "1",
+    id: "geo-24",
+    state: "Nagaland",
+    societyNum: 1,
   },
   {
-    id: "26",
-    state: "TAMIL NADU",
-    societyNum: "115",
+    id: "geo-25",
+    state: "Orissa",
+    societyNum: 0,
   },
   {
-    id: "27",
-    state: "TELANGANA",
-    societyNum: "29",
+    id: "geo-26",
+    state: "Puducherry",
+    societyNum: 1,
   },
   {
-    id: "28",
-    state: "TRIPURA",
-    societyNum: "3",
+    id: "geo-27",
+    state: "Punjab",
+    societyNum: 8,
   },
   {
-    id: "29",
-    state: "UTTAR PRADESH",
-    societyNum: "120",
+    id: "geo-28",
+    state: "Rajasthan",
+    societyNum: 37,
   },
   {
-    id: "30",
-    state: "UTTARAKHAND",
-    societyNum: "1",
+    id: "geo-29",
+    state: "Sikkim",
+    societyNum: 1,
   },
   {
-    id: "31",
-    state: "WEST BENGAL",
-    societyNum: "40",
+    id: "geo-30",
+    state: "Tamil Nadu",
+    societyNum: 115,
+  },
+  {
+    id: "geo-31",
+    state: "Tripura",
+    societyNum: 3,
+  },
+  {
+    id: "geo-32",
+    state: "Uttar Pradesh",
+    societyNum: 120,
+  },
+  {
+    id: "geo-33",
+    state: "Uttaranchal",
+    societyNum: 0,
+  },
+  {
+    id: "geo-34",
+    state: "West Bengal",
+    societyNum: 40,
   },
 ];
+
+export const stateWiseRegionData = {
+  "Andaman & Nicobar Island": {
+    value: 0,
+  },
+  "Andhra Pradesh": {
+    value: 21,
+  },
+  "Arunanchal Pradesh": {
+    value: 1,
+  },
+  Assam: {
+    value: 6,
+  },
+  Bihar: {
+    value: 19,
+  },
+  Chandigarh: {
+    value: 1,
+  },
+  Chhattisgarh: {
+    value: 8,
+  },
+  Delhi: {
+    value: 39,
+  },
+  Goa: {
+    value: 2,
+  },
+  Gujarat: {
+    value: 43,
+  },
+  Haryana: {
+    value: 19,
+  },
+  "Himachal Pradesh": {
+    value: 1,
+  },
+  "Jammu & Kashmir": {
+    value: 2,
+  },
+  Jharkhand: {
+    value: 9,
+  },
+  Karnataka: {
+    value: 28,
+  },
+  Kerala: {
+    value: 33,
+  },
+  Lakshadweep: {
+    value: 0,
+  },
+  "Madhya Pradesh": {
+    value: 29,
+  },
+  Maharashtra: {
+    value: 601,
+  },
+  Manipur: {
+    value: 4,
+  },
+  Meghalaya: {
+    value: 0,
+  },
+  Mizoram: {
+    value: 0,
+  },
+  Nagaland: {
+    value: 1,
+  },
+  Odisha: {
+    value: 31,
+  },
+  Puducherry: {
+    value: 1,
+  },
+  Punjab: {
+    value: 8,
+  },
+  Rajasthan: {
+    value: 37,
+  },
+  Sikkim: {
+    value: 1,
+  },
+  "Tamil Nadu": {
+    value: 115,
+  },
+  Telangana: {
+    value: 29,
+  },
+  Tripura: {
+    value: 28,
+  },
+  "Uttar Pradesh": {
+    value: 120,
+  },
+  Uttarakhand: {
+    value: 1,
+  },
+  "West Bengal": {
+    value: 40,
+  },
+};
 
 export const yearWiseList = [
   {
