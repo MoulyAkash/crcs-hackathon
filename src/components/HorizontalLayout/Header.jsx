@@ -74,7 +74,7 @@ const Header = (props) => {
   }
   return (
     <header
-      // id="page-topbar"
+      id="page-topbar"
       style={{
         // backgroundImage: `url(${background})`,
         background: "#171941",
@@ -85,76 +85,72 @@ const Header = (props) => {
         // backgroundSize: "",
       }}
     >
-      <div style={{ backdropFilter: "blur(7px)" }}>
-        <div className="navbar-header">
+      <div
+        className="d-flex"
+        style={{
+          justifyContent: "space-between",
+          width: "100%",
+          alignItems: "center",
+        }}
+      >
+        <div
+          style={{
+            flex: "1",
+            display: "flex",
+            gap: "18px",
+            color: "#ffffff",
+            alignItems: "center",
+          }}
+          className="d-none d-lg-flex"
+        >
           <div
-            className="d-flex"
             style={{
-              justifyContent: "space-between",
-              width: "100%",
-              alignItems: "center",
+              padding: "7px",
+              borderRadius: "7px",
+              background: "#ffffff",
             }}
           >
-            <div
-              style={{
-                flex: "1",
-                display: "flex",
-                gap: "18px",
-                color: "#ffffff",
-                alignItems: "center",
-              }}
-              className="d-none d-lg-flex"
-            >
-              <div
-                style={{
-                  padding: "7px",
-                  borderRadius: "7px",
-                  background: "#ffffff",
-                }}
-              >
-                <img src={lion} alt="logo" height={90} />
-              </div>
+            <img src={lion} alt="logo" height={90} />
+          </div>
 
-              <div>
-                <h2 style={{ color: "#ffffff", fontWeight: "bold" }}>
-                  Central Registrar for Cooperative Societies
-                </h2>
-                <h5 style={{ color: "#ffffff" }}>
-                  Ministry of Cooperation, Govt. of India
-                </h5>
-              </div>
-            </div>
-
-            <div style={{ backdropFilter: "blur(7px)" }}>
-              <div className="navbar-header">
-                <div
-                  className="d-flex"
-                  style={{
-                    justifyContent: "space-between",
-                    width: "100%",
-                    alignItems: "center",
-                  }}
-                >
-                  <div>
-                    <img src={logo} alt="logo" height={120} />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <button
-              type="button"
-              className="btn btn-sm px-3 font-size-16 d-lg-none header-item"
-              data-toggle="collapse"
-              onClick={() => {
-                props.toggleLeftmenu(!props.leftMenu);
-              }}
-              data-target="#topnav-menu-content"
-            >
-              <i className="fa fa-fw fa-bars" />
-            </button>
+          <div>
+            <h2 style={{ color: "#ffffff", fontWeight: "bold" }}>
+              Central Registrar for Cooperative Societies
+            </h2>
+            <h5 style={{ color: "#ffffff" }}>
+              Ministry of Cooperation, Govt. of India
+            </h5>
           </div>
         </div>
+
+        <div>
+          <div>
+            <div
+              className="d-flex"
+              style={{
+                justifyContent: "space-between",
+                width: "100%",
+                alignItems: "center",
+              }}
+            >
+              <div>
+                <img src={logo} alt="logo" className="navbar-logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          className="btn btn-sm px-3 font-size-16 d-lg-none header-item"
+          data-toggle="collapse"
+          onClick={() => {
+            props.toggleLeftmenu(!props.leftMenu);
+          }}
+          data-target="#topnav-menu-content"
+        >
+          <i className="fa fa-fw fa-bars" />
+        </button>
       </div>
     </header>
   );

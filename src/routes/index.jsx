@@ -15,12 +15,16 @@ import Dashboard from "../pages/Dashboard";
 import Registration from "../pages/Registration";
 import Home from "../pages/Home";
 import StateWiseSocietyList from "../pages/StateWiseSocietyList";
+import Forms from "../pages/Forms/index";
+import MSCS from "../pages/MSCSAct";
 
 const authProtectedRoutes = [
   { path: "/dashboard", component: Dashboard },
   { path: "/registration", component: Registration },
   { path: "/home", component: Home },
   { path: "/state-wise-society-list", component: StateWiseSocietyList },
+  { path: "/forms/:id", component: Forms },
+  { path: "/mscs/:id", component: MSCS },
 
   // //profile
   { path: "/profile", component: UserProfile },

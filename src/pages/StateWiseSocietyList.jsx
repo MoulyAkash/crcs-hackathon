@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import DatamapsIndia from "react-datamaps-india";
 import { Tooltip } from "react-tooltip";
 
-import { stateWiseList, stateWiseRegionData } from "../data/data";
+import { stateWiseList } from "../data/data";
 
 //import components
 import Breadcrumbs from "../components/Common/Breadcrumb";
@@ -36,7 +36,7 @@ function StateWiseSocietyList() {
   return (
     <div className="page-content">
       <Container fluid style={{ maxWidth: 1500 }}>
-        <Breadcrumbs title="Tables" breadcrumbItem="Data Tables" />
+        <Breadcrumbs title="Registered Societies" breadcrumbItem="State-wise List" />
         <Row>
           <Col lg={6}>
             <div
@@ -77,7 +77,6 @@ function StateWiseSocietyList() {
               columns={stateWiseTableColumns}
               data={stateWiseList}
               isGlobalFilter={true}
-              isAddOptions={true}
               customPageSize={10}
               className="custom-header-css"
             />

@@ -140,7 +140,10 @@ const Navbar = (props) => {
                     <div className="arrow-down"></div>
                   </Link>
                   <div className={classname("dropdown-menu", { show: ui })}>
-                    <Link to="/state-wise-society-list" className="dropdown-item">
+                    <Link
+                      to="/state-wise-society-list"
+                      className="dropdown-item"
+                    >
                       {props.t("State-wise List")}
                     </Link>
                     <Link to="/#" className="dropdown-item">
@@ -163,23 +166,26 @@ const Navbar = (props) => {
                       e.preventDefault();
                       setapp(!app);
                     }}
-                    to="/dashboard"
+                    to="/forms/1"
                   >
                     {props.t("Forms")} {props.menuOpen}
                     <div className="arrow-down"></div>
                   </Link>
                   <div className={classname("dropdown-menu", { show: app })}>
-                    <Link to="/#" className="dropdown-item">
+                    <Link to="/forms/1" className="dropdown-item">
                       {props.t("Form I")}
                     </Link>
-                    <Link to="/#" className="dropdown-item">
+                    <Link to="/forms/2" className="dropdown-item">
                       {props.t("Form II")}
                     </Link>
-                    <Link to="/#" className="dropdown-item">
+                    <Link to="/forms/3" className="dropdown-item">
                       {props.t("Form III")}
                     </Link>
-                    <Link to="/#" className="dropdown-item">
+                    <Link to="/forms/4" className="dropdown-item">
                       {props.t("Form IV")}
+                    </Link>
+                    <Link to="/forms/5" className="dropdown-item">
+                      {props.t("Form V")}
                     </Link>
                   </div>
                 </li>
@@ -192,22 +198,22 @@ const Navbar = (props) => {
                       e.preventDefault();
                       setemail(!email);
                     }}
-                    to="/dashboard"
+                    to="/mscs/1"
                   >
                     {props.t("MSCS Act")} {props.menuOpen}
                     <div className="arrow-down"></div>
                   </Link>
                   <div className={classname("dropdown-menu", { show: email })}>
-                    <Link to="/#" className="dropdown-item">
+                    <Link to="/mscs/1" className="dropdown-item">
                       {props.t("MSCS Act,2002")}
                     </Link>
-                    <Link to="/#" className="dropdown-item">
+                    <Link to="/mscs/2" className="dropdown-item">
                       {props.t("MSCS Rules,2002")}
                     </Link>
-                    <Link to="/#" className="dropdown-item">
+                    <Link to="/mscs/3" className="dropdown-item">
                       {props.t("Model Bye-laws")}
                     </Link>
-                    <Link to="/#" className="dropdown-item">
+                    <Link to="/mscs/4" className="dropdown-item">
                       {props.t("National Policy on Cooperative 2002")}
                     </Link>
                   </div>

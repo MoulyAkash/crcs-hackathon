@@ -3,6 +3,7 @@ import { Row, Col, Card, CardBody, CardTitle, Container } from "reactstrap";
 import MiniWidget from "../../components/Common/mini-widget";
 import NewsEvents from "../../components/Common/NewsEvents";
 import SectorDistribution from "../../components/Common/SectorDistribution";
+import Breadcrumbs from "../../components/Common/Breadcrumb";
 
 const series1 = [
   { name: "Reg. Societies", data: [12, 14, 2, 47, 42, 15, 47, 75, 65, 19, 14] },
@@ -137,6 +138,7 @@ const Dashboard = () => {
     <React.Fragment>
       <div className="page-content">
         <Container fluid>
+          <Breadcrumbs title="Home" breadcrumbItem="Dashboard" />
           <Row>
             <MiniWidget reports={reports} />
           </Row>

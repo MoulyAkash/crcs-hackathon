@@ -1,3 +1,14 @@
+import Form1 from "../assets/forms/Form1.pdf";
+import Form2 from "../assets/forms/Form2.pdf";
+import Form3 from "../assets/forms/Form3.pdf";
+import Form4 from "../assets/forms/Form4.pdf";
+import Form5 from "../assets/forms/Form5.pdf";
+
+import GuidelineAct2002 from "../assets/mscs-act/GuidelineAct2002.pdf";
+import Rules2002 from "../assets/mscs-act/Rules2002.pdf";
+import Model2002 from "../assets/mscs-act/Model2002.pdf";
+import NatPolicy02 from "../assets/mscs-act/NatPolicy02.pdf";
+
 export const stateWiseList = [
   {
     id: "geo-0",
@@ -175,111 +186,6 @@ export const stateWiseList = [
     societyNum: 40,
   },
 ];
-
-export const stateWiseRegionData = {
-  "Andaman & Nicobar Island": {
-    value: 0,
-  },
-  "Andhra Pradesh": {
-    value: 21,
-  },
-  "Arunanchal Pradesh": {
-    value: 1,
-  },
-  Assam: {
-    value: 6,
-  },
-  Bihar: {
-    value: 19,
-  },
-  Chandigarh: {
-    value: 1,
-  },
-  Chhattisgarh: {
-    value: 8,
-  },
-  Delhi: {
-    value: 39,
-  },
-  Goa: {
-    value: 2,
-  },
-  Gujarat: {
-    value: 43,
-  },
-  Haryana: {
-    value: 19,
-  },
-  "Himachal Pradesh": {
-    value: 1,
-  },
-  "Jammu & Kashmir": {
-    value: 2,
-  },
-  Jharkhand: {
-    value: 9,
-  },
-  Karnataka: {
-    value: 28,
-  },
-  Kerala: {
-    value: 33,
-  },
-  Lakshadweep: {
-    value: 0,
-  },
-  "Madhya Pradesh": {
-    value: 29,
-  },
-  Maharashtra: {
-    value: 601,
-  },
-  Manipur: {
-    value: 4,
-  },
-  Meghalaya: {
-    value: 0,
-  },
-  Mizoram: {
-    value: 0,
-  },
-  Nagaland: {
-    value: 1,
-  },
-  Odisha: {
-    value: 31,
-  },
-  Puducherry: {
-    value: 1,
-  },
-  Punjab: {
-    value: 8,
-  },
-  Rajasthan: {
-    value: 37,
-  },
-  Sikkim: {
-    value: 1,
-  },
-  "Tamil Nadu": {
-    value: 115,
-  },
-  Telangana: {
-    value: 29,
-  },
-  Tripura: {
-    value: 28,
-  },
-  "Uttar Pradesh": {
-    value: 120,
-  },
-  Uttarakhand: {
-    value: 1,
-  },
-  "West Bengal": {
-    value: 40,
-  },
-};
 
 export const yearWiseList = [
   {
@@ -1786,5 +1692,65 @@ export const registeredSocieties = [
     registrationDate: "26/09/2016",
     operationArea: "West bengal, Andhra Pradesh",
     sectorType: "Credit",
+  },
+];
+
+export const formsPDF = [
+  {
+    id: "1",
+    formName: "Form 1",
+    formSize: "1 MB",
+    file: Form1,
+  },
+  {
+    id: "2",
+    formName: "Form 2",
+    formSize: "2.5 MB",
+    file: Form2,
+  },
+  {
+    id: "3",
+    formName: "Form 3",
+    formSize: "353 KB",
+    file: Form3,
+  },
+  {
+    id: "4",
+    formName: "Form 4",
+    formSize: "0.5 MB",
+    file: Form4,
+  },
+  {
+    id: "5",
+    formName: "Form 5",
+    formSize: "1.2 MB",
+    file: Form5,
+  },
+];
+
+export const mscsPDF = [
+  {
+    id: "1",
+    formName: "MSCS Act, 2002",
+    formSize: "1 MB",
+    file: GuidelineAct2002,
+  },
+  {
+    id: "2",
+    formName: "MSCS Rules, 2002",
+    formSize: "2.5 MB",
+    file: Rules2002,
+  },
+  {
+    id: "3",
+    formName: "Model Bye Laws",
+    formSize: "353 KB",
+    file: Model2002,
+  },
+  {
+    id: "4",
+    formName: "National Policy on Cooperatives, 2002",
+    formSize: "0.5 MB",
+    file: NatPolicy02,
   },
 ];

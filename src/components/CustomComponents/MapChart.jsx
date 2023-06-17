@@ -41,7 +41,7 @@ const MapChart = ({ setTooltipContent }) => {
                 }}
                 data-tip=""
                 data-tooltip-id="my-tooltip"
-                data-tooltip-content={geo.properties.NAME_1}
+                data-tooltip-content={`${geo.properties.NAME_1} ${d.societyNum}`}
                 data-tooltip-place="top"
                 style={{
                   hover: {
