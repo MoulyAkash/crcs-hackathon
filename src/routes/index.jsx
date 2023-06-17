@@ -16,6 +16,7 @@ import Registration from "../pages/Registration";
 import Home from "../pages/Home";
 import StateWiseSocietyList from "../pages/StateWiseSocietyList";
 import AllRegSocieties from "../pages/AllRegSocieties";
+import AnnualReturnsOffline from "../pages/AnnualReturnsOffline";
 
 const authProtectedRoutes = [
   { path: "/dashboard", component: Dashboard },
@@ -23,6 +24,7 @@ const authProtectedRoutes = [
   { path: "/home", component: Home },
   { path: "/state-wise-society-list", component: StateWiseSocietyList },
   { path: "/all-reg-crcs", component: AllRegSocieties },
+  { path: "/filled-ar-offline", component: AnnualReturnsOffline },
 
   // //profile
   { path: "/profile", component: UserProfile },
