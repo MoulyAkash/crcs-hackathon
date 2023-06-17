@@ -21,6 +21,8 @@ import Forms from "../pages/Forms/index";
 import MSCS from "../pages/MSCSAct";
 import AllRegSocieties from "../pages/AllRegSocieties";
 import AnnualReturnsOffline from "../pages/AnnualReturnsOffline";
+import Bank from "../pages/Bank";
+import RegisteredUsers from "../pages/RegisteredUsers";
 
 const authProtectedRoutes = [
   { path: "/dashboard", component: Dashboard },
@@ -33,6 +35,9 @@ const authProtectedRoutes = [
   { path: "/mscs/:id", component: MSCS },
   { path: "/all-reg-crcs", component: AllRegSocieties },
   { path: "/filled-ar-offline", component: AnnualReturnsOffline },
+  { path: "/bank", component: Bank },
+  { path: "/registered-users", component: RegisteredUsers },
+
 
   // //profile
   { path: "/profile", component: UserProfile },
