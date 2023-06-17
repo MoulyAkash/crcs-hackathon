@@ -289,7 +289,7 @@ const Navbar = (props) => {
                     <Link to="/#" className="dropdown-item">
                       {props.t("Registered Users")}
                     </Link>
-                    <Link to="/#" className="dropdown-item">
+                    <Link to="/filled-ar-offline" className="dropdown-item">
                       {props.t("Filed Annual Returns Online")}
                     </Link>
                     <Link to="/#" className="dropdown-item">
