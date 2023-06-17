@@ -45,46 +45,94 @@ function FinancialYearWiseList() {
       if (newWidth < 992) {
         setChartState({
           options: {
-            chart: {
-              id: "basic-bar",
+            chart: { zoom: { enabled: !1 }, toolbar: { show: !1 } },
+            colors: ["#556ee6", "#34c38f"],
+            dataLabels: { enabled: 0 },
+            stroke: { width: [3, 3], curve: "straight" },
+            grid: {
+              row: { colors: ["transparent", "transparent"], opacity: 0.2 },
+              borderColor: "#f1f1f1",
             },
+            markers: { style: "inverted", size: 6 },
             xaxis: {
               categories: financialYearWiseList
                 .map((item) => item.financialYear)
                 .slice(1)
-                .slice(-10),
+                .slice(-8),
+              title: { text: "Financial Year" },
             },
+            yaxis: { title: { text: "Registered Societies" } },
+            legend: {
+              position: "top",
+              horizontalAlign: "right",
+              floating: !0,
+              offsetY: -25,
+              offsetX: -5,
+            },
+            responsive: [
+              {
+                breakpoint: 600,
+                options: {
+                  chart: { toolbar: { show: !1 } },
+                  legend: { show: !1 },
+                },
+              },
+            ],
           },
           series: [
             {
-              name: "societyNum",
+              name: "Number Of Societies",
               data: financialYearWiseList
                 .map((item) => item.societyNum)
                 .slice(1)
-                .slice(-10),
+                .slice(-8),
             },
           ],
         });
       } else if (newWidth > 991) {
         setChartState({
           options: {
-            chart: {
-              id: "basic-bar",
+            chart: { zoom: { enabled: !1 }, toolbar: { show: !1 } },
+            colors: ["#556ee6", "#34c38f"],
+            dataLabels: { enabled: 0 },
+            stroke: { width: [3, 3], curve: "straight" },
+            grid: {
+              row: { colors: ["transparent", "transparent"], opacity: 0.2 },
+              borderColor: "#f1f1f1",
             },
+            markers: { style: "inverted", size: 6 },
             xaxis: {
               categories: financialYearWiseList
                 .map((item) => item.financialYear)
                 .slice(1)
-                .slice(-20),
+                .slice(-18),
+              title: { text: "Financial Year" },
             },
+            yaxis: { title: { text: "Registered Societies" } },
+            legend: {
+              position: "top",
+              horizontalAlign: "right",
+              floating: !0,
+              offsetY: -25,
+              offsetX: -5,
+            },
+            responsive: [
+              {
+                breakpoint: 600,
+                options: {
+                  chart: { toolbar: { show: !1 } },
+                  legend: { show: !1 },
+                },
+              },
+            ],
           },
           series: [
             {
-              name: "societyNum",
+              name: "Number of Societies",
               data: financialYearWiseList
                 .map((item) => item.societyNum)
                 .slice(1)
-                .slice(-20),
+                .slice(-18),
             },
           ],
         });
@@ -104,90 +152,19 @@ function FinancialYearWiseList() {
           title="Registered Societies"
           breadcrumbItem="Financial Year-wise List"
         />
-        <Col lg={12} style={{ marginBottom: 20 }}>
-          <div id="line-chart" dir="ltr">
-            {chartState && (
-              <ReactApexChart
-                series={chartState.series}
-                options={chartState.options}
-                type="line"
-                height={320}
-                className="apex-charts"
-              />
-            )}
-          </div>
-        </Col>
         <Row style={{ justifyContent: "center", alignItems: "center" }}>
           <Col lg={6}>
-            <Card>
-              <CardBody>
-                <CardTitle className="mb-6">
-                  Registered Societies vs Financial Year
-                </CardTitle>
-                <div className="text-center">
-                  <div className="mb-4">
-                    <i className="bx bx-map-pin text-primary display-4" />
-                  </div>
-                  <h3>1,456</h3>
-                  <p>Societies Registered</p>
-                </div>
-
-                <div className="table-responsive mt-4">
-                  <table className="table align-middle table-nowrap">
-                    <tbody>
-                      <tr>
-                        <td style={{ width: "30%" }}>
-                          <p className="mb-0">2020-21</p>
-                        </td>
-                        <td style={{ width: "25%" }}>
-                          <h5 className="mb-0">104</h5>
-                        </td>
-                        <td>
-                          <Progress
-                            value="75"
-                            color="primary"
-                            className="bg-transparent progress-sm"
-                            size="sm"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p className="mb-0">2018-19</p>
-                        </td>
-                        <td>
-                          <h5 className="mb-0">172</h5>
-                        </td>
-                        <td>
-                          <Progress
-                            value="97"
-                            color="success"
-                            className="bg-transparent progress-sm"
-                            size="sm"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p className="mb-0">2016-17</p>
-                        </td>
-                        <td>
-                          <h5 className="mb-0">147</h5>
-                        </td>
-                        <td>
-                          <Progress
-                            value="90"
-                            color="warning"
-                            className="bg-transparent progress-sm"
-                            size="sm"
-                          />
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </CardBody>
-            </Card>
+            <div id="line-chart" dir="ltr">
+              {chartState && (
+                <ReactApexChart
+                  series={chartState.series}
+                  options={chartState.options}
+                  type="line"
+                  height={320}
+                  className="apex-charts"
+                />
+              )}
+            </div>
           </Col>
           <Col lg={6}>
             <TableContainer

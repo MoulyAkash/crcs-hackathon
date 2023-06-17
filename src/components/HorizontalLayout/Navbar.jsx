@@ -261,10 +261,10 @@ const Navbar = (props) => {
                     <Link to="/registration" className="dropdown-item">
                       {props.t("New User Registration")}
                     </Link>
-                    <Link to="/#" className="dropdown-item">
+                    <Link to="/login" className="dropdown-item">
                       {props.t("User Login")}
                     </Link>
-                    <Link to="/#" className="dropdown-item">
+                    <Link to="/login" className="dropdown-item">
                       {props.t("Admin User")}
                     </Link>
                   </div>
@@ -289,7 +289,7 @@ const Navbar = (props) => {
                     <Link to="/all-reg-crcs" className="dropdown-item">
                       {props.t("All Reg Societies ")}
                     </Link>
-                    <Link to="/#" className="dropdown-item">
+                    <Link to="/registered-users" className="dropdown-item">
                       {props.t("Registered Users")}
                     </Link>
                     <Link to="/filled-ar-offline" className="dropdown-item">
@@ -326,10 +326,7 @@ const Navbar = (props) => {
                 <li className="nav-item">
                   <Link
                     className="nav-link dropdown-toggle arrow-none"
-                    onClick={(e) => {
-                      e.preventDefault();
-                    }}
-                    to="/dashboard"
+                    to="/bank"
                   >
                     {props.t("Bank")} {props.menuOpen}
                   </Link>
