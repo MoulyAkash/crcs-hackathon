@@ -11,6 +11,7 @@ import {
 import MiniWidget from "../../components/Common/mini-widget";
 import NewsEvents from "../../components/Common/NewsEvents";
 import SectorDistribution from "../../components/Common/SectorDistribution";
+import Breadcrumbs from "../../components/Common/Breadcrumb";
 import MapStat from "../../components/Common/MapStat";
 import { Tooltip } from "react-tooltip";
 import TrainingProgram from "../../components/Common/TrainingProgram";
@@ -148,6 +149,7 @@ const Dashboard = () => {
     <React.Fragment>
       <div className="page-content">
         <Container fluid>
+          <Breadcrumbs title="Home" breadcrumbItem="Dashboard" />
           <Row>
             <MiniWidget reports={reports} />
           </Row>
