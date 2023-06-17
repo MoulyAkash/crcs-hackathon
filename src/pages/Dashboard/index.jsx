@@ -143,7 +143,7 @@ const Dashboard = () => {
 
           <Row>
             {/* State wise  */}
-            <Col lg="4">
+            <Col lg="5">
               <Card>
                 <CardBody>
                   <CardTitle
