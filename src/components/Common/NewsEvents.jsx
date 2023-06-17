@@ -76,7 +76,7 @@ const data = [
   },
 ];
 
-const Activity = (props) => {
+const NewsEvents = (props) => {
   return (
     <React.Fragment>
       <Col xl={5}>
@@ -235,4 +235,4 @@ const Activity = (props) => {
   );
 };
 
-export default Activity;
+export default NewsEvents;

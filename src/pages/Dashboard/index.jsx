@@ -1,7 +1,8 @@
 import React from "react";
-import { Container, Row } from "reactstrap";
+import { Row, Col, Card, CardBody, CardTitle, Container } from "reactstrap";
 import MiniWidget from "../../components/Common/mini-widget";
-import Activity from "../../components/Common/Activity";
+import NewsEvents from "../../components/Common/NewsEvents";
+import SectorDistribution from "../../components/Common/SectorDistribution";
 
 const series1 = [
   { name: "Reg. Societies", data: [12, 14, 2, 47, 42, 15, 47, 75, 65, 19, 14] },
@@ -141,7 +142,26 @@ const Dashboard = () => {
           </Row>
 
           <Row>
-            <Activity />
+            {/* State wise  */}
+            <Col lg="4">
+              <Card>
+                <CardBody>
+                  <CardTitle
+                    style={{
+                      fontSize: "18px",
+                    }}
+                  >
+                    Sector-wise Distribution
+                  </CardTitle>
+                  <div id="sector-distribution-chart" className="e-chart">
+                    <SectorDistribution />
+                  </div>
+                </CardBody>
+              </Card>
+            </Col>
+
+            {/* News and Events */}
+            <NewsEvents />
           </Row>
         </Container>
       </div>
