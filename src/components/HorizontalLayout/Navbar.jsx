@@ -146,8 +146,8 @@ const Navbar = (props) => {
                     >
                       {props.t("State-wise List")}
                     </Link>
-                    <Link to="/#" className="dropdown-item">
-                      {props.t("All Reg. Societies(pdf)")}
+                    <Link to="/all-reg-crcs" className="dropdown-item">
+                      {props.t("All Reg. Societies")}
                     </Link>
                     <Link to="/#" className="dropdown-item">
                       {props.t("Calender Year-wise List")}
@@ -292,7 +292,7 @@ const Navbar = (props) => {
                     <Link to="/#" className="dropdown-item">
                       {props.t("Registered Users")}
                     </Link>
-                    <Link to="/#" className="dropdown-item">
+                    <Link to="/filled-ar-offline" className="dropdown-item">
                       {props.t("Filed Annual Returns Online")}
                     </Link>
                     <Link to="/#" className="dropdown-item">

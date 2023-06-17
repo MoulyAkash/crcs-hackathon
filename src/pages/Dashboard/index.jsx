@@ -4,6 +4,8 @@ import MiniWidget from "../../components/Common/mini-widget";
 import NewsEvents from "../../components/Common/NewsEvents";
 import SectorDistribution from "../../components/Common/SectorDistribution";
 import Breadcrumbs from "../../components/Common/Breadcrumb";
+import MapStat from "../../components/Common/MapStat";
+import { Tooltip } from "react-tooltip";
 
 const series1 = [
   { name: "Reg. Societies", data: [12, 14, 2, 47, 42, 15, 47, 75, 65, 19, 14] },
@@ -164,6 +166,25 @@ const Dashboard = () => {
 
             {/* News and Events */}
             <NewsEvents />
+          </Row>
+
+          <Row>
+            <Col lg={8}>
+              <Card>
+                <CardBody>
+                  <CardTitle
+                    style={{
+                      fontSize: "18px",
+                    }}
+                  >
+                    Geographic Distribution
+                  </CardTitle>
+
+                  <MapStat />
+                  <Tooltip id="map-stat" />
+                </CardBody>
+              </Card>
+            </Col>
           </Row>
         </Container>
       </div>

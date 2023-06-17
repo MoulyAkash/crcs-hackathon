@@ -5,10 +5,10 @@ const data = {
   totalRegisteredSocieties: 5000,
   sectorDistribution: {
     Agriculture: 2000,
-    Finance: 1000,
-    "Consumer Goods": 1500,
     Housing: 300,
     Healthcare: 200,
+    Finance: 1000,
+    "Consumer Goods": 1500,
   },
 };
 
@@ -23,7 +23,7 @@ const SectorDistribution = () => {
     },
     legend: {
       orient: "vertical",
-      left: "right",
+      left: "left",
       data: Object.keys(data.sectorDistribution),
       textStyle: {
         color: ["#74788d"],
@@ -32,7 +32,7 @@ const SectorDistribution = () => {
     color: ["#02a499", "#f8b425", "#ec4561", "#38a4f8", "#3c4ccf"],
     series: [
       {
-        name: "Total sales",
+        name: "Total Co-ops",
         type: "pie",
         radius: "55%",
         center: ["50%", "60%"],
@@ -50,10 +50,6 @@ const SectorDistribution = () => {
       },
     ],
   };
-  return (
-    <React.Fragment>
-      <ReactEcharts style={{ height: "350px" }} option={options} />
-    </React.Fragment>
-  );
+  return <ReactEcharts style={{ height: "350px" }} option={options} />;
 };
 export default SectorDistribution;

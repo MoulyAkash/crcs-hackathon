@@ -123,22 +123,7 @@ const Header = (props) => {
           </div>
         </div>
 
-        <div>
-          <div>
-            <div
-              className="d-flex"
-              style={{
-                justifyContent: "space-between",
-                width: "100%",
-                alignItems: "center",
-              }}
-            >
-              <div>
-                <img src={logo} alt="logo" className="navbar-logo" />
-              </div>
-            </div>
-          </div>
-        </div>
+        <img src={logo} alt="logo" className="navbar-logo" />
 
         <button
           type="button"
